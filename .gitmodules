@@ -1,0 +1,3 @@
+[submodule "pure-zsh-prompt"]
+	path = pure-zsh-prompt
+	url = https://github.com/sindresorhus/pure.git
