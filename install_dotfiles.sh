@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# This script will install dotfiles
+# Root of repo, dir this script is in
+DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Dotfiles
 

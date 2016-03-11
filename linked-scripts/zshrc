@@ -1,0 +1,35 @@
+alias ll="ls -alh"
+alias l="ls"
+alias code="cd ~/code"
+alias nuke="rm -rf"
+alias servdir="python -m SimpleHTTPServer 8080"
+alias servedir="servdir"
+alias untar="tar -xvzf"
+alias lip="localip"
+alias eip="externalip"
+alias clr="clear"
+
+alias t="todo.sh"
+
+function mkcd {
+    mkdir $1
+    cd $1
+    echo "You are in: " 
+    pwd
+}
+
+function xa {
+    clear
+    cd    
+}
+
+function localip {
+    ifconfig | grep 192 | cut -d ' ' -f 12 | cut -d ':' -f 2
+}
+
+function externalip {
+    curl http://checkip.amazonaws.com/
+}
+
+export PATH=$PATH:/home/eric/bin
+export fpath=( "$HOME/.zfunctions" $fpath )
