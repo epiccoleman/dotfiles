@@ -105,3 +105,7 @@ $ ln -s "$PWD/async.zsh" "$HOME/.zfunctions/async"
 ```
 
 also gotta add the thing to .zshrc
+
+ok, added thing. set my font to droid sans 13 pt. looks good man. 
+
+
