@@ -1,3 +1,7 @@
 [user]
 	email = ecoleman@pillartechnology.com
 	name = Eric Coleman
+[core]
+	editor = /usr/bin/vim
+[push]
+	default = simple

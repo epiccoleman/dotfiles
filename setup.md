@@ -109,3 +109,15 @@ also gotta add the thing to .zshrc
 ok, added thing. set my font to droid sans 13 pt. looks good man. 
 
 
+Sun May  1 12:55:45 EDT 2016
+
+install rvm according to instructions on their site
+gem install bundler
+git config --global core.editor=/usr/bin/vim
+http://stackoverflow.com/questions/15817661/vim-wrong-indentation
+git config --global push.default simple
+
+
+Sun May 15 16:08:11 EDT 2016
+Added cron git backup to todo.sh - every 5 minutes todo.txt will sync with git
+ 

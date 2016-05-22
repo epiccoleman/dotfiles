@@ -9,7 +9,7 @@ alias lip="localip"
 alias eip="externalip"
 alias clr="clear"
 
-alias t="todo.sh"
+alias t="todo.sh -d ~/.todo/todo.cfg"
 
 function mkcd {
     mkdir $1
@@ -31,5 +31,24 @@ function externalip {
     curl http://checkip.amazonaws.com/
 }
 
+function idea {
+
+    if [ -z $1 ]; then
+        vim ~/ideas.md 
+    else
+        date >> ~/ideas.md
+        echo $1 >> ~/ideas.md
+    fi
+}
+
+
 export PATH=$PATH:/home/eric/bin
 export fpath=( "$HOME/.zfunctions" $fpath )
+
+# turn on prompt system
+autoload -U promptinit && promptinit
+prompt pure
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source /home/eric/.rvm/scripts/rvm
