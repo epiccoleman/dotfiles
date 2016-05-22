@@ -121,3 +121,5 @@ git config --global push.default simple
 Sun May 15 16:08:11 EDT 2016
 Added cron git backup to todo.sh - every 5 minutes todo.txt will sync with git
  
+gem install homesick
+
