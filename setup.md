@@ -123,3 +123,9 @@ Added cron git backup to todo.sh - every 5 minutes todo.txt will sync with git
  
 gem install homesick
 
+
+Sat Jun  4 13:12:29 EDT 2016
+
+wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+
+need to automate linking of pure theme 
