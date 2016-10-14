@@ -15,5 +15,6 @@ git pull origin master
 git checkout master
 popd 
 
+mkdir -p $HOME/.zfunctions
 ln -sf $PWD/pure-zsh-prompt/async.zsh $HOME/.zfunctions/async
 ln -sf $PWD/pure-zsh-prompt/pure.zsh $HOME/.zfunctions/prompt_pure_setup
