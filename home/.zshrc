@@ -1,6 +1,5 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
+HISTFILE=~/.histfile HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob
 unsetopt beep
@@ -8,6 +7,7 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/eric/.zshrc'
+zstyle :compinstall filename '/Users/eric/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -16,8 +16,7 @@ compinit
 alias ll="ls -alh"
 alias l="ls"
 alias code="cd ~/code"
-alias nuke="rm -rf"
-alias servdir="python -m SimpleHTTPServer 8080"
+alias nuke="rm -rf" alias servdir="python -m SimpleHTTPServer 8080"
 alias servedir="servdir"
 alias untar="tar -xvzf"
 alias lip="localip"
@@ -58,7 +57,7 @@ function idea {
 
 
 export EDITOR=/user/bin/vim
-export PATH=$PATH:/home/eric/bin
+export PATH=$PATH:/Users/eric/.gem/ruby/2.0.0/bin:/home/eric/bin
 export fpath=( "$HOME/.zfunctions" $fpath )
 
 # turn on prompt system
