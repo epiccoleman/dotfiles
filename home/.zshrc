@@ -6,17 +6,16 @@ unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/eric/.zshrc'
-zstyle :compinstall filename '/Users/eric/.zshrc'
+zstyle :compinstall filename "${HOME}/.zshrc"
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
 alias ll="ls -alh"
 alias l="ls"
 alias code="cd ~/code"
-alias nuke="rm -rf" alias servdir="python -m SimpleHTTPServer 8080"
+alias nuke="rm -rf" 
+alias servdir="python -m SimpleHTTPServer 8080"
 alias servedir="servdir"
 alias untar="tar -xvzf"
 alias lip="localip"
@@ -46,7 +45,6 @@ function externalip {
 }
 
 function idea {
-
     if [ -z $1 ]; then
         vim ~/ideas.md 
     else
@@ -55,9 +53,9 @@ function idea {
     fi
 }
 
-
 export EDITOR=/user/bin/vim
-export PATH=$PATH:/Users/eric/.gem/ruby/2.0.0/bin:/home/eric/bin
+local_gems_dir=${HOME}/.gem/ruby/2.0.0/bin
+export PATH=${PATH}:${local_gems_dir} 
 export fpath=( "$HOME/.zfunctions" $fpath )
 
 # turn on prompt system
