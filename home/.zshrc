@@ -53,7 +53,7 @@ function idea {
     fi
 }
 
-export EDITOR=/user/bin/vim
+export EDITOR=/usr/bin/vim
 local_gems_dir=${HOME}/.gem/ruby/2.0.0/bin
 export PATH=${PATH}:${local_gems_dir} 
 export fpath=( "$HOME/.zfunctions" $fpath )
