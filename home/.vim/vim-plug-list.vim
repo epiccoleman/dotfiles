@@ -1,5 +1,5 @@
 call plug#begin()
 
-Plug 'altercation/vim-colors-solarized'
+Plug 'epiccoleman/vim-colors-solarized',{ 'do': './install.sh' } 
 
 call plug#end()
