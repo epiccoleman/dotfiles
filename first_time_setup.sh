@@ -6,3 +6,7 @@ gem install homesick
 
 homesick clone epiccoleman/dotfiles
 homesick symlink dotfiles
+
+dotfiles_repo_dir=${HOME}/.homesick/repos/dotfiles
+
+$dotfiles_repo_dir/install_pure_prompt.sh
