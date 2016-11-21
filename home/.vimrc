@@ -34,4 +34,4 @@ set clipboard=unnamed
 " statusline always shows
 set laststatus=2
 
-source ~/.vim/.vim-plug
+source ~/.vim/vim-plug-list.vim
