@@ -12,8 +12,6 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 filetype plugin indent on
 
-execute pathogen#infect()
-
 syntax enable
 set background=dark
 colorscheme solarized
@@ -35,3 +33,5 @@ set clipboard=unnamed
 
 " statusline always shows
 set laststatus=2
+
+source ~/.vim/.vim-plug
