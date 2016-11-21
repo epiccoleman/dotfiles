@@ -21,6 +21,7 @@ alias untar="tar -xvzf"
 alias lip="localip"
 alias eip="externalip"
 alias clr="clear"
+alias dotfiles="cd ~/.homesick/repos/dotfiles"
 
 alias t="todo.sh -d ~/.todo/todo.cfg"
 
@@ -61,3 +62,8 @@ export fpath=( "$HOME/.zfunctions" $fpath )
 # turn on prompt system
 autoload -U promptinit && promptinit
 prompt pure
+
+
+#enable colors for iterm2
+export CLICOLOR=1
+export TERM=xterm-256color
