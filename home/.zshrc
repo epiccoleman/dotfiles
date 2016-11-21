@@ -56,7 +56,7 @@ function idea {
 
 export EDITOR=/usr/bin/vim
 local_gems_dir=${HOME}/.gem/ruby/2.0.0/bin
-export PATH=${PATH}:${local_gems_dir} 
+export PATH=${PATH}:${local_gems_dir}:/usr/local/bin
 export fpath=( "$HOME/.zfunctions" $fpath )
 
 # turn on prompt system
