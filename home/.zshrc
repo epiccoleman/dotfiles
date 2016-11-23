@@ -22,8 +22,20 @@ alias lip="localip"
 alias eip="externalip"
 alias clr="clear"
 alias dotfiles="cd ~/.homesick/repos/dotfiles"
+alias clone="quick-clone"
 
 alias t="todo.sh -d ~/.todo/todo.cfg"
+
+function quick-clone {
+    local clone_url=${1}
+    local target_dir=${2}
+
+    if [[ ! $clone_url =~ "\/" ]]; then
+        git clone http://github.com/epiccoleman/${clone_url} ${target_dir}
+    else
+        git clone http://github.com/${clone_url} ${target_dir}
+    fi
+}
 
 function mkcd {
     mkdir $1
