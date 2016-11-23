@@ -8,9 +8,11 @@ script_dir=${dotfiles_repo_dir}
 echo "gem: --user-install" > $HOME/.gemrc
 
 gem install homesick
-
 homesick clone epiccoleman/dotfiles
 homesick symlink dotfiles --force
 
 ${script_dir}/install_pure_prompt.sh
 ${script_dir}/install_vim_plug.sh
+
+# Interactive steps below this line 
+${script_dir}/vim_plugins.sh install 
