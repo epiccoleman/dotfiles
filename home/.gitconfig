@@ -8,3 +8,5 @@
 [alias]
 	stat = status
 	st = status
+[status]
+	showUntrackedFiles = all
