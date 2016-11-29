@@ -19,10 +19,6 @@ colorscheme solarized
 " mappings
 inoremap jk <esc>
 nnoremap <CR> ^i<CR><esc>
-noremap <C-n> :set relativenumber! <enter>
-" this is a shortcut for stopping all the sounds in overtone
-" depends on having a stop macro in register a
-noremap <C-c> @a 
 
 " make filename completion more like bash
 set wildmode=longest,list,full
