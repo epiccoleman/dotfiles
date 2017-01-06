@@ -8,5 +8,6 @@
 [alias]
 	stat = status
 	st = status
+    nuke = reset --hard HEAD
 [status]
 	showUntrackedFiles = all
