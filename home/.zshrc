@@ -23,8 +23,9 @@ alias eip="externalip"
 alias clr="clear"
 alias dotfiles="cd ~/.homesick/repos/dotfiles"
 alias clone="quick-clone"
+alias cask="brew cask"
 
-alias t="todo.sh -d ~/.todo/todo.cfg"
+#alias t="todo.sh -d ~/.todo/todo.cfg"
 
 function quick-clone {
     local clone_url=${1}
