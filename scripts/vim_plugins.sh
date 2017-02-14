@@ -4,4 +4,4 @@ install() {
     vim -c ":PlugUpdate"
 }
 
-for arg in "$@"; do $arg; done
+for cmd in "$@"; do $cmd; done
