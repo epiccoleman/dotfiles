@@ -9,3 +9,4 @@
 * Need a nice way to add the homesick gem to the path when using `gem: --user-install`
 * can I change out this awful ass # in profont
 * need a way to distinguish between linux or osx (probably could just prompt in `first_time_setup`) 
+* homeshick is homesick without the ruby dependency and with a stupider name. it might be worth switching, look into it more
