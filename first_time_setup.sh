@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dotfiles_repo_dir=${HOME}/.homesick/repos/dotfiles
-script_dir=${dotfiles_repo_dir}
+script_dir=${dotfiles_repo_dir}/scripts
 
 # sets up ruby gems to install to home dir 
 # (no need for sudo on `gem install`)
