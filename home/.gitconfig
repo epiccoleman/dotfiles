@@ -3,6 +3,7 @@
 	name = Eric Coleman
 [core]
 	editor = /usr/bin/vim
+	excludesfile = /Users/eric/.gitignore-global
 [push]
 	default = simple
 [alias]
