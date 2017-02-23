@@ -25,6 +25,9 @@ alias dotfiles="cd ~/.homesick/repos/dotfiles"
 alias clone="quick-clone"
 alias cask="brew cask"
 
+# dont commit this
+alias city="cd ~/src/clojure/quil/city"
+
 #alias t="todo.sh -d ~/.todo/todo.cfg"
 
 function quick-clone {
@@ -80,3 +83,7 @@ prompt pure
 #enable colors for iterm2
 export CLICOLOR=1
 export TERM=xterm-256color
+
+export HISTSIZE=1000
+export SAVEHIST=1000
+export HISTFILE="~/.zsh-history"
