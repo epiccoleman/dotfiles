@@ -13,6 +13,12 @@ set expandtab " insert spaces instead of tab chars
 set shiftwidth=4 " size of an indent 
 set smarttab
 
+
+set incsearch  " begin to match as you type 
+set hlsearch   " highlight search entries
+set ignorecase " ignorecase combined with smartcase means case is ignored
+set smartcase  "   UNLESS you include caps in your search string
+
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 filetype plugin indent on
