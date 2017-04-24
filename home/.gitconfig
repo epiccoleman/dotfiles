@@ -3,12 +3,13 @@
 	name = Eric Coleman
 [core]
 	editor = /usr/bin/vim
-	excludesfile = /Users/eric/.gitignore-global
+	excludesfile = ~/.gitignore-global
 [push]
 	default = simple
 [alias]
 	stat = status
 	st = status
-    nuke = reset --hard HEAD
+        nuke = reset --hard HEAD
+	alias = config --get-regexp ^alias\\.
 [status]
 	showUntrackedFiles = all
