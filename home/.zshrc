@@ -11,6 +11,19 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# turn on prompt system
+autoload -U promptinit && promptinit
+prompt pure
+
+export fpath=( "$HOME/.zfunctions" $fpath )
+
+# history settings
+export HISTSIZE=1000
+export SAVEHIST=1000
+export HISTFILE="~/.zsh-history"
+
+# aliases and functions
 alias ll="ls -alh"
 alias l="ls"
 alias code="cd ~/code"
@@ -24,11 +37,6 @@ alias clr="clear"
 alias dotfiles="cd ~/.homesick/repos/dotfiles"
 alias clone="quick-clone"
 alias cask="brew cask"
-
-# dont commit this
-alias city="cd ~/src/clojure/quil/city"
-
-#alias t="todo.sh -d ~/.todo/todo.cfg"
 
 function quick-clone {
     local clone_url=${1}
@@ -73,17 +81,7 @@ function idea {
 export EDITOR=/usr/bin/vim
 local_gems_dir=${HOME}/.gem/ruby/2.0.0/bin
 export PATH=${PATH}:${local_gems_dir}:/usr/local/bin
-export fpath=( "$HOME/.zfunctions" $fpath )
-
-# turn on prompt system
-autoload -U promptinit && promptinit
-prompt pure
-
 
 #enable colors for iterm2
 export CLICOLOR=1
 export TERM=xterm-256color
-
-export HISTSIZE=1000
-export SAVEHIST=1000
-export HISTFILE="~/.zsh-history"
