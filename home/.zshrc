@@ -16,11 +16,19 @@ export fpath=( "$HOME/.zfunctions" $fpath )
 autoload -U promptinit && promptinit
 prompt pure
 
-
 # history settings
 export HISTSIZE=1000
 export SAVEHIST=1000
 export HISTFILE="~/.zsh-history"
+
+# use vi style line editor
+bindkey -v
+# use jk to get to 'normal mode'
+bindkey -M viins 'jk' vi-cmd-mode
+
+# fixes weird delete behavior, probably osx/macbook specific?
+# https://superuser.com/questions/997593/why-does-zsh-insert-a-when-i-press-the-delete-key
+bindkey "^[[3~" delete-char
 
 # aliases and functions
 alias ll="ls -alh"
