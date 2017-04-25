@@ -20,3 +20,4 @@
 * linux stuff needs done soon!
 * fzf
 * https://github.com/tj/git-extras
+* https://pthree.org/2009/03/28/add-vim-editing-mode-to-your-zsh-prompt/
