@@ -12,11 +12,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# this needs to happen before prompt system init
+export fpath=( "$HOME/.zfunctions" $fpath )
+
 # turn on prompt system
 autoload -U promptinit && promptinit
 prompt pure
 
-export fpath=( "$HOME/.zfunctions" $fpath )
 
 # history settings
 export HISTSIZE=1000
