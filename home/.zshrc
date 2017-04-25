@@ -33,8 +33,7 @@ bindkey "^[[3~" delete-char
 # aliases and functions
 alias ll="ls -alh"
 alias l="ls"
-alias code="cd ~/code"
-alias nuke="rm -rf" 
+alias nuke="rm -rf"
 alias servdir="python -m SimpleHTTPServer 8080"
 alias servedir="servdir"
 alias untar="tar -xvzf"
@@ -59,13 +58,13 @@ function quick-clone {
 function mkcd {
     mkdir $1
     cd $1
-    echo "You are in: " 
+    echo "You are in: "
     pwd
 }
 
 function xa {
     clear
-    cd    
+    cd
 }
 
 function localip {
@@ -78,7 +77,7 @@ function externalip {
 
 function idea {
     if [ -z $1 ]; then
-        vim ~/ideas.md 
+        vim ~/ideas.md
     else
         date >> ~/ideas.md
         echo $1 >> ~/ideas.md
