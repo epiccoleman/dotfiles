@@ -11,8 +11,6 @@
 * need a way to distinguish between linux or osx (probably could just prompt in `first_time_setup`) 
 * homeshick is homesick without the ruby dependency and with a stupider name. it might be worth switching, look into it more
 
-* inputrc should let me use jk to switch between modes in vimode which would be cool https://unix.stackexchange.com/questions/27699/remap-bash-vi-keys
-* different in zsh, see `man zshzle`
 * tmux conf
 * break out common shell stuff into its own file, which is sourced by .zshrc and .bashrc
 * xsel 
@@ -21,3 +19,7 @@
 * fzf
 * https://github.com/tj/git-extras
 * https://pthree.org/2009/03/28/add-vim-editing-mode-to-your-zsh-prompt/
+* nerdtree?? 
+
+* already did the below on OSX, but would be good to find scriptable way to do it
+* https://askubuntu.com/questions/149971/how-do-you-remap-a-key-to-the-caps-lock-key-in-xubuntu
