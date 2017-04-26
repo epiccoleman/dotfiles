@@ -25,6 +25,9 @@ export HISTFILE="~/.zsh-history"
 bindkey -v
 # use jk to get to 'normal mode'
 bindkey -M viins 'jk' vi-cmd-mode
+# bind ^R to search for when you forget about vi mode
+bindkey '^R' history-incremental-search-backward
+
 
 # fixes weird delete behavior, probably osx/macbook specific?
 # https://superuser.com/questions/997593/why-does-zsh-insert-a-when-i-press-the-delete-key
