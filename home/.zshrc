@@ -17,9 +17,9 @@ autoload -U promptinit && promptinit
 prompt pure
 
 # history settings
+export HISTFILE=~/.zsh-history
 export HISTSIZE=1000
 export SAVEHIST=1000
-export HISTFILE="~/.zsh-history"
 
 # use vi style line editor
 bindkey -v
