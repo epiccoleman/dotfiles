@@ -20,6 +20,7 @@ set ignorecase " ignorecase combined with smartcase means case is ignored
 set smartcase  "   UNLESS you include caps in your search string
 
 let g:netrw_liststyle = 3 " set default view to 'tree' in netrw file browser 
+let g:netrw_banner = 0    " don't show netrw banner by default ('I' will toggle it)
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
