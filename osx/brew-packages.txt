@@ -1,7 +1,0 @@
-# pkgs
-wget
-
-# Casks
-google-chrome
-keepassx
-iterm2

@@ -15,6 +15,8 @@ export fpath=( "$HOME/.zfunctions" $fpath )
 # turn on prompt system
 autoload -U promptinit && promptinit
 prompt pure
+# prompt char is green normally and red after a failed command
+PROMPT=%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯ }%f 
 
 # history settings
 export HISTFILE=~/.zsh-history
