@@ -35,6 +35,9 @@ bindkey '^R' history-incremental-search-backward
 # https://superuser.com/questions/997593/why-does-zsh-insert-a-when-i-press-the-delete-key
 bindkey "^[[3~" delete-char
 
+# source a non-vc'ed profile for machine-specific stuff (this should be pretty short)
+source ~/.system-specific-profile
+
 # aliases and functions
 alias ll="ls -alh"
 alias l="ls"
