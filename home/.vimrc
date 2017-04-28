@@ -1,5 +1,4 @@
 " enable line numbers
-
 set number
 
 " fix weird backspace behavior
