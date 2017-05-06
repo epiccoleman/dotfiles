@@ -15,3 +15,6 @@ ${script_dir}/install_vim_plug.sh
 
 # Interactive steps below this line 
 ${script_dir}/vim_plugins.sh install 
+${script_dir}/generate_ssh_key.sh 
+
+echo "All done. You should go add your ssh key to github."
