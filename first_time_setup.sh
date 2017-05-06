@@ -3,13 +3,12 @@
 dotfiles_repo_dir=${HOME}/.homesick/repos/dotfiles
 script_dir=${dotfiles_repo_dir}/scripts
 
-# sets up ruby gems to install to home dir 
-# (no need for sudo on `gem install`)
-echo "gem: --user-install" > $HOME/.gemrc
+git clone https://github.com/epiccoleman/homeshick.git ${HOME}/.homesick/repos/homeshick
 
-gem install homesick
-homesick clone epiccoleman/dotfiles
-homesick symlink dotfiles --force
+source ${HOME}/.homesick/repos/homeshick/homeshick.sh
+
+homeshick clone epiccoleman/dotfiles
+homeshick symlink dotfiles --force
 
 ${script_dir}/install_pure_prompt.sh
 ${script_dir}/install_vim_plug.sh

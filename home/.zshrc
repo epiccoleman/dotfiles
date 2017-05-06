@@ -51,6 +51,7 @@ alias clr="clear"
 alias dotfiles="cd ~/.homesick/repos/dotfiles"
 alias clone="quick-clone"
 alias cask="brew cask"
+alias homesick="homeshick"
 
 function quick-clone {
     local clone_url=${1}
