@@ -1,5 +1,5 @@
 [global_config]
-  title_transmit_bg_color = "#d30102"
+  title_transmit_bg_color = "#859900"
   focus = system
 [keybindings]
 [profiles]
