@@ -20,6 +20,7 @@
 * https://github.com/tj/git-extras
 * https://pthree.org/2009/03/28/add-vim-editing-mode-to-your-zsh-prompt/
 * nerdtree?? 
+* https://github.com/itchyny/lightline.vim
 
 * already did the below on OSX, but would be good to find scriptable way to do it
 * https://askubuntu.com/questions/149971/how-do-you-remap-a-key-to-the-caps-lock-key-in-xubuntu
