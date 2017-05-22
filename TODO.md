@@ -24,3 +24,4 @@
 
 * already did the below on OSX, but would be good to find scriptable way to do it
 * https://askubuntu.com/questions/149971/how-do-you-remap-a-key-to-the-caps-lock-key-in-xubuntu
+* install ptpython, pry 
