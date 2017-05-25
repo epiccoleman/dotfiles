@@ -49,6 +49,7 @@ alias dotfiles="cd ~/.homesick/repos/dotfiles"
 alias clone="quick-clone"
 alias cask="brew cask"
 alias homesick="homeshick"
+alias t='tmux'
 
 function quick-clone {
     local clone_url=${1}
