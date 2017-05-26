@@ -4,6 +4,7 @@ set number
 " fix weird backspace behavior
 set backspace=indent,eol,start
 
+" INDENTING
 " see top answer here
 " http://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
 set tabstop=8 " max tab width
@@ -11,6 +12,10 @@ set softtabstop=0 " defensively - don't do softtab
 set expandtab " insert spaces instead of tab chars 
 set shiftwidth=4 " size of an indent 
 set smarttab
+
+" ruby indent rules
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+filetype plugin indent on
 
 " search options 
 set incsearch  " begin to match as you type 
@@ -21,10 +26,10 @@ set smartcase  "   UNLESS you include caps in your search string
 let g:netrw_liststyle = 3 " set default view to 'tree' in netrw file browser 
 let g:netrw_banner = 0    " don't show netrw banner by default ('I' will toggle it)
 
+" .md files are markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-filetype plugin indent on
-
+" syntax highlighting and theme
 syntax enable
 set background=dark
 colorscheme solarized
