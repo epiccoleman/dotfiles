@@ -54,4 +54,6 @@ set clipboard=unnamed
 " statusline always shows
 set laststatus=2
 
+set showcmd "show cmd in bottom right corner
+
 source ~/.vim/vim-plug-list.vim
