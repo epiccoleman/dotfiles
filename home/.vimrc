@@ -39,6 +39,11 @@ set background=dark
 let g:solarized_termtrans = 1
 colorscheme solarized
 
+" leader key
+let mapleader='\'
+"doing it this way means \ can show up in showcmd instead of nothing
+nmap <Space> <leader>  
+
 " mappings
 inoremap jk <esc>
 nnoremap <CR> ^i<CR><esc>
