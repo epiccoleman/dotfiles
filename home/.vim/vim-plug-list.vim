@@ -9,5 +9,6 @@ Plug 'tpope/vim-fugitive'
 
 " lang-specific
 Plug 'tpope/vim-fireplace'
+Plug 'tmux-plugins/vim-tmux'
 
 call plug#end()
