@@ -11,5 +11,6 @@
 	st = status
         nuke = reset --hard HEAD
 	alias = config --get-regexp ^alias\\.
+        shlog = log --oneline
 [status]
 	showUntrackedFiles = all
