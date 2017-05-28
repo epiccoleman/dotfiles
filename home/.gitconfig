@@ -1,16 +1,16 @@
 [user]
-	email = eric@epiccoleman.com
-	name = Eric Coleman
+    email = eric@epiccoleman.com
+    name = Eric Coleman
 [core]
-	editor = /usr/bin/vim
-	excludesfile = ~/.gitignore-global
+    editor = /usr/bin/vim
+    excludesfile = ~/.gitignore-global
 [push]
-	default = simple
+    default = simple
 [alias]
-	stat = status
-	st = status
-        nuke = reset --hard HEAD
-	alias = config --get-regexp ^alias\\.
-        shlog = log --oneline
+    stat  = status
+    st    = status
+    nuke  = reset --hard HEAD
+    alias = config --get-regexp ^alias\\.
+    shlog = log --oneline
 [status]
-	showUntrackedFiles = all
+    showUntrackedFiles = all
