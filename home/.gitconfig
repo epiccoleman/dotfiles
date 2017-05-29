@@ -14,5 +14,6 @@
     shlog = log --oneline
     sl    = log --oneline
     cm    = commit -m
+    aa    = add --all
 [status]
     showUntrackedFiles = all
