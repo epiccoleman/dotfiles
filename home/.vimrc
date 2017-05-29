@@ -31,13 +31,13 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " syntax highlighting and theme
 syntax enable
-" fixes a display issue on linux
-highlight! link Visual Cursorline
 set background=dark 
 " see https://github.com/altercation/vim-colors-solarized#advanced-configuration
 " use transparent background - needed on linux
 let g:solarized_termtrans = 1
 colorscheme solarized
+" fixes a display issue on linux
+highlight! link Visual Cursorline
 
 " leader key
 let mapleader='\'
