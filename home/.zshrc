@@ -50,6 +50,7 @@ alias clone="quick-clone"
 alias cask="brew cask"
 alias homesick="homeshick"
 alias t='tmux'
+alias tl='tmux list-sessions'
 
 function quick-clone {
     local clone_url=${1}
