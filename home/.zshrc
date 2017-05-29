@@ -100,6 +100,15 @@ function ta {
     fi
 }
 
+function ts {
+    local session="$1"
+    if [[ -z "$session" ]]; then
+        tmux
+    else
+        tmux new-session -s "$session"
+    fi
+}
+
 export EDITOR=/usr/bin/vim
 local_gems_dir=${HOME}/.gem/ruby/2.0.0/bin
 export PATH=${PATH}:${local_gems_dir}:/usr/local/bin
