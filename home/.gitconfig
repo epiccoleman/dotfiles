@@ -12,5 +12,7 @@
     nuke  = reset --hard HEAD
     alias = config --get-regexp ^alias\\.
     shlog = log --oneline
+    sl    = log --oneline
+    cm    = commit -m
 [status]
     showUntrackedFiles = all
