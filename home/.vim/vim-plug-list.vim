@@ -1,7 +1,7 @@
 call plug#begin()
 
 " theme
-Plug 'epiccoleman/vim-colors-solarized',{ 'do': './install.sh' } 
+Plug 'epiccoleman/vim-colors-solarized',{ 'do': './install.sh' }
 
 " universal functionality
 Plug 'tpope/vim-commentary'
