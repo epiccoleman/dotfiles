@@ -15,5 +15,6 @@
     sl    = log --oneline
     cm    = commit -m
     aa    = add --all
+    dc    = diff --cached
 [status]
     showUntrackedFiles = all
