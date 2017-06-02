@@ -11,5 +11,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " lang-specific
 Plug 'tpope/vim-fireplace'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'kana/vim-textobj-user'
+Plug 'epiccoleman/vim-textobj-rubyblock'
 
 call plug#end()

@@ -71,4 +71,7 @@ set laststatus=2
 
 set showcmd "show cmd in bottom right corner
 
+runtime macros/matchit.vim " better matching for % command
+set nocompatible " for the ruby block text object
+
 source ~/.vim/vim-plug-list.vim
