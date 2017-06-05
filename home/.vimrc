@@ -59,6 +59,8 @@ inoremap jk <esc>
 nnoremap <CR> ^i<CR><esc>
 inoremap <S-Tab> <C-d>
 
+nnoremap <Leader>b :ls<CR>:b<Space>
+
 " make filename completion more like bash
 set wildmode=longest,list,full
 set wildmenu
