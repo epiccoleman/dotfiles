@@ -12,6 +12,10 @@ describe package('tmux') do
   it { should be_installed }
 end
 
+describe command('tmux -V') do
+  its(:stdout) { should match /2.3/ }
+end
+
 describe package('wget') do
   it { should be_installed }
 end
