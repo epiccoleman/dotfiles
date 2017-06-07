@@ -11,6 +11,7 @@
 * How can I test this?  (serverspec in docker??)
 * Packer image for Linux VM
 * rbenv and install scripts
+* tmux keybindings for window switching - once that's done, unbind p and use it to paste tmux buffer
 
 ## Misc
 * need a way to distinguish between linux or osx (probably could just prompt in `first_time_setup`) 
