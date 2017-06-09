@@ -14,6 +14,7 @@
 * tmux keybindings for window switching - once that's done, unbind p and use it to paste tmux buffer
 
 ## Misc
+* tmux-resurrect and tmux-continuum
 * need a way to distinguish between linux or osx (probably could just prompt in `first_time_setup`) 
 * xsel 
 * https://blog.bugsnag.com/tmux-and-vim/
