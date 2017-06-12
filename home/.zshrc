@@ -16,7 +16,7 @@ export fpath=( "$HOME/.zfunctions" $fpath )
 autoload -U promptinit && promptinit
 prompt pure
 # prompt char is green normally and red after a failed command
-PROMPT=%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯ }%f 
+PROMPT=%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯ }%f
 
 # history settings
 export HISTFILE=~/.zsh-history
@@ -135,7 +135,7 @@ export TERM=xterm-256color
 # this should be at the end so that stuff can be overridden here
 source ~/.system-specific-profile
 
-# this should be at the end of the profile, because rbenv wants to 
+# this should be at the end of the profile, because rbenv wants to
 # be at the front of the path variable (so it can have precedence)
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
