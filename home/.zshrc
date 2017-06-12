@@ -115,7 +115,7 @@ function tk {
     local session="$1"
     if [[ ! -z "$session" ]]; then
         # this is zsh read syntax - will have to adjust to use for bash
-        read "response?Kill session: $session [Y/n]?"
+        read "response?Kill session: $session [Y/n]? "
         response=${response}
         if [[ $response =~ ^(yes|y|Y| ) ]] | [ -z $response ]; then
             tmux kill-session -t "$session"
