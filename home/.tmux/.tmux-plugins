@@ -1,0 +1,12 @@
+# vim: set ft=tmux:
+
+# tmux plugin list for tpm
+
+set -g @plugin 'tmux-plugins/tpm'
+
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @continuum-restore 'on' # automatically restore saved state on start
+
+# this should stay at the bottom
+run '~/.tmux/plugins/tpm/tpm'
