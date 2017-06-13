@@ -72,5 +72,7 @@ set clipboard=unnamed
 set laststatus=2
 
 set showcmd "show cmd in bottom right corner
+set modeline
+set modelines=5
 
 source ~/.vim/vim-plug-list.vim
