@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 dotfiles_repo_dir=${HOME}/.homesick/repos/dotfiles
 script_dir=${dotfiles_repo_dir}/scripts
@@ -12,9 +12,11 @@ homeshick symlink dotfiles --force
 
 ${script_dir}/install_pure_prompt.sh
 ${script_dir}/install_vim_plug.sh
+${script_dir}/install-tmux-tpm.sh
 
-# Interactive steps below this line 
-${script_dir}/vim_plugins.sh install 
-${script_dir}/generate_ssh_key.sh 
+${script_dir}/run_serverspec.sh
+## Interactive steps below this line
+#${script_dir}/vim_plugins.sh install
+#${script_dir}/generate_ssh_key.sh
 
 echo "All done. You should go add your ssh key to github."
