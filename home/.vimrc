@@ -60,6 +60,7 @@ nnoremap <CR> ^i<CR><esc>
 inoremap <S-Tab> <C-d>
 
 nnoremap <Leader>b :ls<CR>:b<Space>
+nnoremap <Leader>n :noh<CR>
 
 " make filename completion more like bash
 set wildmode=longest,list,full
