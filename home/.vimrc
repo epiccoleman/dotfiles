@@ -73,8 +73,8 @@ set clipboard=unnamed
 set laststatus=2
 
 set showcmd "show cmd in bottom right corner
-set modeline
-set modelines=5
+set modeline " enable modelines
+set modelines=5 " search for modeline with first and last 5 lines
 
 set splitbelow "open new horizontal splits below current one
 set splitright "open new vertical splits below current one
