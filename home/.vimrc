@@ -76,4 +76,7 @@ set showcmd "show cmd in bottom right corner
 set modeline
 set modelines=5
 
+set splitbelow "open new horizontal splits below current one
+set splitright "open new vertical splits below current one
+
 source ~/.vim/vim-plug-list.vim
