@@ -8,6 +8,7 @@
     default = simple
 [alias]
     stat  = status
+    tatus = status
     st    = status
     nuke  = reset --hard HEAD
     alias = config --get-regexp ^alias\\.

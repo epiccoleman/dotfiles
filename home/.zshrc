@@ -52,6 +52,7 @@ alias homesick="homeshick"
 alias t='tmux'
 alias tl='tmux list-sessions'
 alias gs='git status'
+alias gits="git"
 
 function quick-clone {
     local clone_url=${1}
