@@ -38,6 +38,8 @@ let g:solarized_termtrans = 1
 colorscheme solarized
 " fixes a display issue on linux
 highlight! link Visual Cursorline
+" make visual mode selection actually, ya know, visible
+hi Visual term=reverse cterm=reverse guibg=Grey
 
 " unless file is markdown, strip trailing spaces on save
 fun! StripTrailingWhiteSpace()
