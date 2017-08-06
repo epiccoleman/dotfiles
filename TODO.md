@@ -4,6 +4,8 @@
 * Install ProFont 
 * Update vim to latest
 * install brew packages (brew bundle?)
+* Need to run init_linux when first_time_setup on linux
+* need to install guest-additions on linux s.t. clipboard && fullscreen work
 
 ## Todo
 * Switch to Homeshick on Mac. Do I need to source homeshick.sh in ~/.zshrc? I'm not sure how this is currently working on linux.
