@@ -17,5 +17,6 @@
     cm    = commit -m
     aa    = add --all
     dc    = diff --cached
+    discard-untracked = git clean -fx
 [status]
     showUntrackedFiles = all
