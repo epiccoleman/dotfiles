@@ -64,6 +64,12 @@ inoremap <S-Tab> <C-d>
 nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <Leader>n :noh<CR>
 
+" porting over spacemacs window movement commands
+nnoremap <Leader>wh <C-w>h
+nnoremap <Leader>wj <C-w>j
+nnoremap <Leader>wk <C-w>k
+nnoremap <Leader>wl <C-w>l
+
 " make filename completion more like bash
 set wildmode=longest,list,full
 set wildmenu
