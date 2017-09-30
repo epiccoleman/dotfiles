@@ -65,13 +65,6 @@ function quick-clone {
     fi
 }
 
-function mkcd {
-    mkdir $1
-    cd $1
-    echo "You are in: "
-    pwd
-}
-
 function xa {
     clear
     cd
