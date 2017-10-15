@@ -314,6 +314,11 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here." 
   (setq-default evil-escape-key-sequence "jk")
   (setq multi-term-program "/usr/bin/zsh")
+  (setq org-agenda-files '("~/src/notes/"))
+  (setq org-default-notes-file '("~/src/notes/"))
+  (setq org-capture-templates
+        '(("d" "Dump" entry (file+headline "~/src/notes/refile.org" "Dumps")
+           "* %T\n%?")))
   (setq org-startup-indented t)
   (setq org-startup-truncated nil))
 
