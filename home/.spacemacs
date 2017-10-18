@@ -46,6 +46,9 @@ values."
      clojure
      markdown
      org
+     (ruby :variables
+           ruby-test-runner 'rspec
+           ruby-version-manager 'rvm)
      (shell :variables
             shell-default-shell 'multi-term
             shell-default-height 30
@@ -137,11 +140,16 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("ProFontWindows"
+   dotspacemacs-default-font '(("ProFontWindows"
                                :size 18
                                :weight normal
                                :width normal
                                :powerline-scale 1.5)
+                               ("ProFont"
+                               :size 14
+                               :weight normal
+                               :width normal
+                               :powerline-scale 1.5))
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -313,7 +321,8 @@ This function is called at the very end of Spacemacs initialization after
 layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
-you should place your code here." 
+you should place your code here."
+
   (setq-default evil-escape-key-sequence "jk")
   (setq multi-term-program "/usr/bin/zsh")
   (setq org-agenda-files '("~/src/notes/"))
@@ -321,6 +330,7 @@ you should place your code here."
   (setq org-capture-templates
         '(("d" "Dump" entry (file+headline "~/src/notes/refile.org" "Dumps")
            "* %T\n%?")))
+  (setq vc-follow-symlinks t)
   (setq org-startup-indented t)
   (setq org-startup-truncated nil))
 
