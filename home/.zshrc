@@ -124,6 +124,10 @@ export PATH=${PATH}:${local_gems_dir}:/usr/local/bin
 export CLICOLOR=1
 export TERM=xterm-256color
 
+# source tool specific scripts
+[ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # source a non-vc'ed profile for machine-specific stuff (this should be pretty short)
 # this should be at the end so that stuff can be overridden here
 if [[ -e ~/.system-specific-profile ]]; then
