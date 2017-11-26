@@ -6,3 +6,4 @@ $if mode=vi
   "jk": vi-movement-mode # remap escape to jk
 $endif
 
+"\C-n": vi-yank-arg

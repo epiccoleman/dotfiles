@@ -1,4 +1,3 @@
-
 setopt autocd extendedglob
 unsetopt beep
 # End of lines configured by zsh-newuser-install
@@ -29,7 +28,7 @@ bindkey -v
 bindkey -M viins 'jk' vi-cmd-mode
 # bind ^R to search for when you forget about vi mode
 bindkey '^R' history-incremental-search-backward
-
+bindkey '^N' insert-last-word
 
 # fixes weird delete behavior, probably osx/macbook specific?
 # https://superuser.com/questions/997593/why-does-zsh-insert-a-when-i-press-the-delete-key
