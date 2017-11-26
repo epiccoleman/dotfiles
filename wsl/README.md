@@ -15,3 +15,6 @@ zsh wasn't compatible with my zshrc due to a bug.
 I added the xenial sources to my sources.list and used that to install zsh-5.1.1 which fixes that problem. It replaced a lot of shit on the system with newer versions, so idk if that will have any unwanted side effects.
 
 After that, I pretty much just ran some of the individual scripts that first_time_setup.sh and linux/init_linux.sh run. This is now a pretty damn decent Linux terminal running natively on my Windows box. 
+
+Also, I installed tmux. Works fine. It's version 1.8 though which is annoying.
+Also, I installed fzf. Works great. 
