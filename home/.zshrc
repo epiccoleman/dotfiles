@@ -130,11 +130,8 @@ export TERM=xterm-256color
 
 # source a non-vc'ed profile for machine-specific stuff (this should be pretty short)
 # this should be at the end so that stuff can be overridden here
-if [[ -e ~/.system-specific-profile ]]; then
-    source ~/.system-specific-profile
-fi
-
 # this should be at the end of the profile, because rbenv wants to
 # be at the front of the path variable (so it can have precedence)
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+[ -f ~/.system-specific-profile ] && source ~/.system-specific-profile
