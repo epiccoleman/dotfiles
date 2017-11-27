@@ -18,5 +18,6 @@
     aa    = add --all
     dc    = diff --cached
     discard-untracked = git clean -fx
+    update-commit = git commit --amend --no-edit
 [status]
     showUntrackedFiles = all

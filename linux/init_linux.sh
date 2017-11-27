@@ -10,3 +10,6 @@ ${dotfiles_repo_dir}/linux/install-profont.sh
 if which zsh > /dev/null; then
     chsh -s $(which zsh)
 fi
+
+# do it this way so i don't have to vc the bashrc that ships with ubuntu
+echo "source ~/.common-shell-profile >> ~/.bashrc"

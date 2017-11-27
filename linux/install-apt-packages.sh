@@ -6,4 +6,6 @@ sudo apt-get install \
     wget \
     tree \
     terminator \
-    zsh
+    zsh \
+    silversearcher-ag \
+    tmux

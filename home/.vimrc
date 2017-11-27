@@ -64,6 +64,8 @@ inoremap <S-Tab> <C-d>
 nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <Leader>n :noh<CR>
 
+nnoremap <Leader>fs :write<CR>
+
 " porting over spacemacs window movement commands
 nnoremap <Leader>wh <C-w>h
 nnoremap <Leader>wj <C-w>j
