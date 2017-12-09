@@ -65,6 +65,7 @@ nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <Leader>n :noh<CR>
 
 nnoremap <Leader>fs :write<CR>
+nnoremap <Leader>fS :wall<CR>
 
 " porting over spacemacs window movement commands
 nnoremap <Leader>wh <C-w>h
@@ -87,6 +88,6 @@ set modeline " enable modelines
 set modelines=5 " search for modeline with first and last 5 lines
 
 set splitbelow "open new horizontal splits below current one
-set splitright "open new vertical splits below current one
+set splitright "open new vertical splits to right of current one
 
 source ~/.vim/vim-plug-list.vim
