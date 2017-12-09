@@ -13,3 +13,7 @@ fi
 
 # do it this way so i don't have to vc the bashrc that ships with ubuntu
 echo "source ~/.common-shell-profile >> ~/.bashrc"
+
+source ~/.homesick/repos/homeshick/homeshick.sh
+homeshick clone dotfiles-xubuntu-vm
+homeshick symlink dotfiles-xubuntu-vm
