@@ -338,7 +338,7 @@ you should place your code here."
 
   (evilem-default-keybindings "U") ; set easymotion leader key to U (one of the only free convenient keys...)
 
-  (spacemacs/set-leader-keys "gP" 'magit-push) ; add shortcut for magit-push to git submenu
+  (spacemacs/set-leader-keys "gp" 'magit-push-popup) ; add shortcut for magit-push-popup to git submenu
 
   ; org stuff
   (setq org-agenda-files '("~/src/notes/"))
