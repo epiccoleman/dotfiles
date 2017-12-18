@@ -329,7 +329,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
   (setq-default evil-escape-key-sequence "jk") ; equivalent to inoremap jk <esc> 
-  (setq multi-term-program "usr/bin/zsh") ; default shell for multiterm
+  (setq multi-term-program "/usr/bin/zsh") ; default shell for multiterm
 
   (when (eq system-type 'darwin)
     (setq multi-term-program "/bin/zsh"))  ; because default zsh on mac is here
