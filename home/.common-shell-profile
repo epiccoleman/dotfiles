@@ -78,18 +78,6 @@ function ts {
     fi
 }
 
-function tk {
-    local session="$1"
-    if [[ ! -z "$session" ]]; then
-        # this is zsh read syntax - will have to adjust to use for bash
-        read "response?Kill session: $session [Y/n]? "
-        response=${response}
-        if [[ $response =~ ^(yes|y|Y| ) ]] | [ -z $response ]; then
-            tmux kill-session -t "$session"
-        fi
-    fi
-}
-
 export EDITOR=/usr/bin/vim
 local_gems_dir=${HOME}/.gem/ruby/2.0.0/bin
 export PATH=${PATH}:${local_gems_dir}:/usr/local/bin
