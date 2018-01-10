@@ -347,8 +347,12 @@ you should place your code here."
         '(("d" "Dump" entry (file+headline "~/src/notes/refile.org" "Dumps")
            "* %T\n%?")))
   (setq org-startup-indented t)
+  (setq org-special-ctrl-a/e t)
   (setq org-startup-truncated nil)
   (setq org-M-RET-may-split-line nil) ; M-RET on a new heading doesn't split the heading because that's fucking stupid
+
+  (setq org-todo-keywords
+        '((sequence "TODO" "QUESTION" "|" "DONE" "ANSWERED")))
 
   (org-babel-do-load-languages
    'org-babel-load-languages
