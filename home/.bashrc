@@ -8,6 +8,9 @@ if [[ ! -z "$session" ]]; then
     fi
 fi
                                                             }
+shopt -s globstar
+shopt -s nullglob
+shopt -s extglob
 
 # source this blindly because i want it to error if it's not there
 source ~/.common-shell-profile
