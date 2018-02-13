@@ -342,7 +342,6 @@ you should place your code here."
   (spacemacs/set-leader-keys "gp" 'magit-push-popup) ; add shortcut for magit-push-popup to git submenu
   (spacemacs/set-leader-keys "ne" 'org-narrow-to-element) ; add shortcut for org narrow to narrow submenu
 
-  (setq enable-remote-dir-locals t) ; don't commit this, it's for ansible mode at CAS
   ; org stuff
   (setq org-agenda-files '("~/src/notes/"))
   (setq org-default-notes-file '("~/src/notes/"))
