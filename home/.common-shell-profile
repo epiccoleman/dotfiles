@@ -78,16 +78,11 @@ function ts {
     fi
 }
 
-function tk {
-    local session="$1"
-    if [[ ! -z "$session" ]]; then
-        # this is zsh read syntax - will have to adjust to use for bash
-        read "response?Kill session: $session [Y/n]? "
-        response=${response}
-        if [[ $response =~ ^(yes|y|Y| ) ]] | [ -z $response ]; then
-            tmux kill-session -t "$session"
-        fi
-    fi
+function color-list {
+    # the colorssss
+    for i in {1..255}; do
+        printf "$(tput setab $i) $i $(tput sgr0)"
+    done
 }
 
 export EDITOR=/usr/bin/vim

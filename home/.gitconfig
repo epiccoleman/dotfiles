@@ -19,5 +19,9 @@
     dc    = diff --cached
     discard-untracked = git clean -fx
     update-commit = git commit --amend --no-edit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [status]
     showUntrackedFiles = all
+[pull]
+    rebase = true
+

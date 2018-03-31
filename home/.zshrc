@@ -34,6 +34,18 @@ bindkey '^N' insert-last-word
 # https://superuser.com/questions/997593/why-does-zsh-insert-a-when-i-press-the-delete-key
 bindkey "^[[3~" delete-char
 
+function tk {
+    local session="$1"
+    if [[ ! -z "$session" ]]; then
+        # this is zsh read syntax - will have to adjust to use for bash
+        read "response?Kill session: $session [Y/n]? "
+        response=${response}
+        if [[ $response =~ ^(yes|y|Y| ) ]] | [ -z $response ]; then
+            tmux kill-session -t "$session"
+        fi
+    fi
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # source this blindly because i want it to error if it's not there
