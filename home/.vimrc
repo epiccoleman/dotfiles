@@ -72,6 +72,10 @@ nnoremap <Leader>wh <C-w>h
 nnoremap <Leader>wj <C-w>j
 nnoremap <Leader>wk <C-w>k
 nnoremap <Leader>wl <C-w>l
+nnoremap <Leader>wv <C-w>v
+nnoremap <Leader>ws <C-w>s
+nnoremap <Leader>wd <C-w>q
+
 
 " make filename completion more like bash
 set wildmode=longest,list,full

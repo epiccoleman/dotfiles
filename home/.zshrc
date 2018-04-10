@@ -48,5 +48,9 @@ function tk {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+alias sbrc='source ~/.zshrc'
+
 # source this blindly because i want it to error if it's not there
 source ~/.common-shell-profile
+
+

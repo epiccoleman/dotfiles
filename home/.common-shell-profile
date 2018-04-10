@@ -26,6 +26,7 @@ alias t='tmux'
 alias tl='tmux list-sessions'
 alias gs='git status'
 alias gits="git"
+alias notes="cd ~/src/notes"
 
 function quick-clone {
     local clone_url=${1}
