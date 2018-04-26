@@ -9,7 +9,7 @@ compinit
 # End of lines added by compinstall
 
 # this needs to happen before prompt system init
-export fpath=( "$HOME/.zfunctions" $fpath )
+export fpath=( "$HOME/.zfunctions" "$HOME/.zsh_completion" $fpath )
 
 # turn on prompt system
 autoload -U promptinit && promptinit
@@ -52,5 +52,3 @@ alias sbrc='source ~/.zshrc'
 
 # source this blindly because i want it to error if it's not there
 source ~/.common-shell-profile
-
-

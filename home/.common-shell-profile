@@ -87,12 +87,12 @@ function color-list {
 }
 
 export EDITOR=/usr/bin/vim
-local_gems_dir=${HOME}/.gem/ruby/2.0.0/bin
-export PATH=${PATH}:${local_gems_dir}:/usr/local/bin
 
 #enable colors for iterm2
 export CLICOLOR=1
 export TERM=xterm-256color
+
+
 
 # source tool specific scripts
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh

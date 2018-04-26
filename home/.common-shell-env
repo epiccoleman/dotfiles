@@ -1,0 +1,2 @@
+[ -f ~/.asdf/asdf.sh ] && source ${HOME}/.asdf/asdf.sh
+[ -f ~/.system-specific-profile ] && source ~/.system-specific-profile
