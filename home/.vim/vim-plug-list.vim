@@ -11,5 +11,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " lang-specific
 Plug 'tpope/vim-fireplace'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
