@@ -1,0 +1,34 @@
+* Installation
+0. Install git, and homeshick
+1. `homeshick clone epiccoleman/dotfiles`
+2. Run linux/init_linux.sh if on linux
+3. Run first_time_setup.sh
+
+Eventually there will be an `init_osx.sh` i assume
+
+* TO DO
+
+* Maybe Later
+  - https://github.com/tj/git-extras
+  - https://github.com/itchyny/lightline.vim
+  - https://pthree.org/2009/03/28/add-vim-editing-mode-to-your-zsh-prompt/
+  - tmux-resurrect and tmux-continuum
+  - Packer image? VM image? Docker container with my config? 
+  - install ptpython, pry 
+  - xsel 
+  - need a way to distinguish between linux or osx (probably could just prompt in `first_time_setup`) 
+  - nerdtree?? 
+** Remap Caps lock to ESC
+https://askubuntu.com/questions/149971/how-do-you-remap-a-key-to-the-caps-lock-key-in-xubuntu
+
+** Redo Setup Docs
+## On Initial Setup 
+  * Install ProFont 
+  * Update vim to latest
+  * install brew packages (brew bundle?)
+  * Need to run init_linux when first_time_setup on linux
+  * need to install guest-additions on linux s.t. clipboard && fullscreen work
+
+** Set up testing/ci
+* Links
+-[[https://blog.bugsnag.com/tmux-and-vim/]] [[https://blog.bugsnag.com/tmux-and-vim/][Tmux and Vim]]
