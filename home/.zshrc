@@ -29,6 +29,8 @@ bindkey -M viins 'jk' vi-cmd-mode
 # bind ^R to search for when you forget about vi mode
 bindkey '^R' history-incremental-search-backward
 bindkey '^N' insert-last-word
+bindkey '^J' down-history
+bindkey '^K' up-history
 
 # fixes weird delete behavior, probably osx/macbook specific?
 # https://superuser.com/questions/997593/why-does-zsh-insert-a-when-i-press-the-delete-key
