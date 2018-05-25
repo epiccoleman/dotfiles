@@ -33,9 +33,9 @@ function quick-clone {
     local target_dir=${2}
 
     if [[ ! $clone_url =~ "\/" ]]; then
-        git clone http://github.com/epiccoleman/${clone_url} ${target_dir}
+        git clone git@github.com:epiccoleman/${clone_url} ${target_dir}
     else
-        git clone http://github.com/${clone_url} ${target_dir}
+        git clone git@github.com:${clone_url} ${target_dir}
     fi
 }
 
