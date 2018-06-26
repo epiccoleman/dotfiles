@@ -12,8 +12,7 @@
     st    = status
     nuke  = reset --hard HEAD
     alias = config --get-regexp ^alias\\.
-    shlog = log --oneline
-    sl    = log --oneline
+    sl = "!f() { git log --oneline -n ${1-5}; }; f"
     cm    = commit -m
     aa    = add --all
     dc    = diff --cached
