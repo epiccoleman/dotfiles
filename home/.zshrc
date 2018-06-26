@@ -1,11 +1,11 @@
 setopt autocd extendedglob
 unsetopt beep
 # End of lines configured by zsh-newuser-install
+
 # The following lines were added by compinstall
 zstyle :compinstall filename "${HOME}/.zshrc"
 
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 # End of lines added by compinstall
 
 # this needs to happen before prompt system init
@@ -31,6 +31,8 @@ bindkey '^R' history-incremental-search-backward
 bindkey '^N' insert-last-word
 bindkey '^J' down-history
 bindkey '^K' up-history
+bindkey '^E' vi-end-of-line
+bindkey '^A' vi-beginning-of-line
 
 # fixes weird delete behavior, probably osx/macbook specific?
 # https://superuser.com/questions/997593/why-does-zsh-insert-a-when-i-press-the-delete-key
