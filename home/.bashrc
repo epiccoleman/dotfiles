@@ -8,9 +8,9 @@ if [[ ! -z "$session" ]]; then
     fi
 fi
                                                             }
-shopt -s globstar
-shopt -s nullglob
-shopt -s extglob
+#shopt -s globstar
+#shopt -s nullglob
+#shopt -s extglob
 
 alias sbrc="source ~/.bashrc"
 

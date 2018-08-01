@@ -50,9 +50,16 @@ function tk {
     fi
 }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && \
+    source ~/.fzf.zsh
 
 alias sbrc='source ~/.zshrc'
+
+[ -f ~/.config/exercism/exercism_completion.zsh ] && \
+    source ~/.config/exercism/exercism_completion.zsh
+
+[ -f ~/.asdf/completions/asdf.bash ] && \
+    source ~/.asdf/completions/asdf.bash
 
 # source this blindly because i want it to error if it's not there
 source ~/.common-shell-profile

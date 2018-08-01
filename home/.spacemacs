@@ -30,8 +30,10 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(sql
+   '(
+     python
      yaml
+     sql
      javascript
      elixir
      html
@@ -51,9 +53,11 @@ values."
      elixir
      terraform
      docker
+     react
      (ruby :variables
+           ruby-enable-enh-ruby-mode t
            ruby-test-runner 'rspec
-           ruby-version-manager 'rvm)
+           ruby-version-manager 'rbenv)
      (shell :variables
             shell-default-shell 'multi-term
             shell-default-height 30
@@ -148,16 +152,16 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '(("ProFontWindows"
-                               :size 18
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.5)
-                               ("ProFont"
-                               :size 14
+   dotspacemacs-default-font '(("Fira Code"
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.5))
+   ;;                             ("ProFont"
+   ;;                             :size 14
+   ;;                             :weight normal
+   ;;                             :width normal
+   ;;                             :powerline-scale 1.5))
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -334,35 +338,32 @@ you should place your code here."
   (setq-default evil-escape-key-sequence "jk") ; equivalent to inoremap jk <esc> 
   (setq multi-term-program "/usr/bin/zsh") ; default shell for multiterm
 
-  (when (eq system-type 'darwin)
-    (setq multi-term-program "/bin/zsh"))  ; because default zsh on mac is here
-
+  (when (eq system-type 'darwin) (setq multi-term-program "/bin/zsh"))  ; because default zsh on mac is here 
   (setq vc-follow-symlinks t) ;
 
   (evilem-default-keybindings "U") ; set easymotion leader key to U (one of the only free convenient keys...)
 
   (spacemacs/set-leader-keys "gp" 'magit-push-popup) ; add shortcut for magit-push-popup to git submenu
   (spacemacs/set-leader-keys "ne" 'org-narrow-to-element) ; add shortcut for org narrow to narrow submenu
+  (setq dotspacemacs-folding-method 'origami)
 
   ; org stuff
-  (setq org-agenda-files '("~/src/notes/"))
-  (setq org-default-notes-file '("~/src/notes/"))
-  (setq org-capture-templates
-        '(("d" "Dump" entry (file+headline "~/src/notes/refile.org" "Dumps")
-           "* ?")))
+  (setq org-directory "~/notes")
+  (setq org-default-notes-file (concat org-directory "/life.org"))
+  (setq org-agenda-files '("~/notes/life.org"))
+
   (setq org-startup-indented t)
   (setq org-special-ctrl-a/e t)
   (setq org-startup-truncated nil)
   (setq org-M-RET-may-split-line nil) ; M-RET on a new heading doesn't split the heading because that's fucking stupid
 
   (setq org-todo-keywords
-        '((sequence "TODO" "LATER" "|" "DONE" )))
+        '((sequence "TODO" "NEXT" "LATER" "|" "DONE" )))
 
   (org-babel-do-load-languages
    'org-babel-load-languages
    '((python . t)))
 
-  ;; https://www.reddit.com/r/emacs/comments/4366f9/how_do_orgrefiletargets_work/
   (setq org-refile-targets '((nil :maxlevel . 9)
                              (org-agenda-files :maxlevel . 9)))
   (setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
@@ -370,28 +371,57 @@ you should place your code here."
 
   (eval-after-load "org"
     '(require 'ox-md nil t)
-    ;; '(require 'ox-confluence nil t)
     )
 
+  (defun jump-to-org-default-notes-file ()
+    (interactive)
+    (find-file-existing org-default-notes-file))
+
+  (spacemacs/set-leader-keys "fn" 'jump-to-org-default-notes-file)
+
   (setq org-capture-templates
-    '(
-     ("t" "Todo" entry
-       (file+headline "~/src/notes/refile.org" "Todo")
-       "* TODO %?")
-      ("d" "Dump" entry
-       (file+headline "~/src/notes/refile.org" "Dumps")
-       "* %T %?")
-      ("l" "Links")
-      ("ll" "Learning Resource" item
-       (file+olp "~/src/notes/life.org" "Learning" "Later" "Learning Resources")
-       " %?")
-      ("lr" "Reading List" item
-       (file+olp "~/src/notes/life.org" "Learning" "To Read")
-       " %?")
-      ("lu" "Unfiled Link" item
-       (file+headline "~/src/notes/refile.org" "Links")
-       " %?")))
+        '(
+          ("t" "To Do" entry
+           (file org-default-notes-file)
+           "* TODO %?")
+          ("d" "Dump" entry
+           (file+olp org-default-notes-file "Refile" "Dumps")
+           "* %T %?")
+          ("i" "Idea" entry (file org-default-notes-file)
+           "* %? :IDEA: \n%t" :clock-in t :clock-resume t)
+          ("n" "Next Task" entry (file+headline org-default-notes-file "Tasks")
+           "** NEXT %? \nDEADLINE: %t")
+          ("l" "Links")
+          ("ll" "Learning Resource" item
+           (file+olp
+            org-default-notes-file
+            "Learning" "Leads" "Learning Resources")
+           "  %?")
+          ("lu" "Unfiled Link" item
+           (file+olp
+            org-default-notes-file
+            "Refile" "Unfiled Links")
+           " %?")
+          ("m" "Music")
+          ("mt" "Listening List" entry
+          (file+olp
+            org-default-notes-file
+            "Media" "Music" "Listening List")
+          "*  %?")
+          ("ml" "Listening Log" entry
+          (file+olp
+            org-default-notes-file
+            "Media" "Music" "Listening Log")
+          "* %? \n%T")
+          ("g" "Gaming")
+          ("gf" "FTL Run" entry
+           (file+olp
+            org-default-notes-file
+            "Gaming" "FTL" "Runs")
+           "*  %?")
+          )
   )
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -401,11 +431,11 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(evil-want-Y-yank-to-eol nil)
- '(org-agenda-files nil)
-
+ '(org-default-notes-file "life.org")
  '(package-selected-packages
    (quote
-    (dockerfile-mode docker tablist docker-tramp terraform-mode hcl-mode ruby-test-mode rspec-mode robe rake ghub let-alist chruby inf-ruby yaml-mode sql-indent org-mime ob-elixir jinja2-mode flycheck-mix flycheck-credo evil-easymotion company-ansible ansible-doc ansible alchemist elixir-mode company-emacs-eclim eclim web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor js2-mode js-doc company-tern dash-functional tern coffee-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data clojure-snippets clj-refactor inflections edn multiple-cursors paredit peg cider-eval-sexp-fu cider seq queue clojure-mode xterm-color unfill solarized-theme smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
+    (enh-ruby-mode rvm ruby-tools rubocop rbenv minitest bundler yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic dockerfile-mode docker tablist docker-tramp terraform-mode hcl-mode ruby-test-mode rspec-mode robe rake ghub let-alist chruby inf-ruby yaml-mode sql-indent org-mime ob-elixir jinja2-mode flycheck-mix flycheck-credo evil-easymotion company-ansible ansible-doc ansible alchemist elixir-mode company-emacs-eclim eclim web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor js2-mode js-doc company-tern dash-functional tern coffee-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data clojure-snippets clj-refactor inflections edn multiple-cursors paredit peg cider-eval-sexp-fu cider seq queue clojure-mode xterm-color unfill solarized-theme smeargle shell-pop orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-download mwim multi-term mmm-mode markdown-toc markdown-mode magit-gitflow htmlize helm-gitignore helm-company helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde- fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async)))
+ '(paradox-github-token t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -434,3 +464,4 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  )
 )
+
