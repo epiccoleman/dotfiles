@@ -8,6 +8,9 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -Uz compinit && compinit
 # End of lines added by compinstall
 
+autoload -z edit-command-line
+zle -N edit-command-line
+
 # this needs to happen before prompt system init
 export fpath=( "$HOME/.zfunctions" "$HOME/.zsh_completion" $fpath )
 
@@ -26,6 +29,8 @@ export SAVEHIST=1000
 bindkey -v
 # use jk to get to 'normal mode'
 bindkey -M viins 'jk' vi-cmd-mode
+
+bindkey -M vicmd '^V' edit-command-line
 # bind ^R to search for when you forget about vi mode
 bindkey '^R' history-incremental-search-backward
 bindkey '^N' insert-last-word
