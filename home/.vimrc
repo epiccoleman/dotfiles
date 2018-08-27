@@ -66,6 +66,7 @@ nnoremap <Leader>n :noh<CR>
 
 nnoremap <Leader>fs :write<CR>
 nnoremap <Leader>fS :wall<CR>
+nnoremap <Leader>sc :noh<CR>
 
 " porting over spacemacs window movement commands
 nnoremap <Leader>wh <C-w>h
