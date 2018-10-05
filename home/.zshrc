@@ -14,6 +14,9 @@ zle -N edit-command-line
 # this needs to happen before prompt system init
 export fpath=( "$HOME/.zfunctions" "$HOME/.zsh_completion" $fpath )
 
+autoload -Uz compinit && compinit
+# End of lines added by compinstall
+
 # turn on prompt system
 autoload -U promptinit && promptinit
 prompt pure
