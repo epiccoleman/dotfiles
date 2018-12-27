@@ -148,7 +148,7 @@ values."
    dotspacemacs-editing-style
                  '(hybrid :variables
                           hybrid-mode-enable-evilified-state t
-                          hybrid-mode-enable-hjkl-bindings t 
+                          hybrid-mode-enable-hjkl-bindings t
                           hybrid-mode-default-state 'normal)
                  ;;tryin out something a little different
 
@@ -439,11 +439,19 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
   (add-hook 'focus-out-hook (lambda () (save-some-buffers t))) ; save on focus lost
+  (add-hook 'before-save-hook 'delete-trailing-whitespace) ; delete trailing space
+  (add-hook 'markdown-mode-hook
+            (lambda ()
+              (set (make-local-variable 'before-save-hook) nil))) ; turn that off for markdown
 
-  (setq-default evil-escape-key-sequence "jk") ; equivalent to inoremap jk <esc> 
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (set (make-local-variable 'before-save-hook) nil))) ; turn that off for org
+
+  (setq-default evil-escape-key-sequence "jk") ; equivalent to inoremap jk <esc>
   (setq multi-term-program "/usr/bin/zsh") ; default shell for multiterm
 
-  (when (eq system-type 'darwin) (setq multi-term-program "/bin/zsh"))  ; because default zsh on mac is here 
+  (when (eq system-type 'darwin) (setq multi-term-program "/bin/zsh"))  ; because default zsh on mac is here
   (setq vc-follow-symlinks t) ;
 
   (evilem-default-keybindings "U") ; set easymotion leader key to U (one of the only free convenient keys...)
@@ -584,4 +592,3 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  )
 )
-
