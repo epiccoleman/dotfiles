@@ -4,4 +4,5 @@
 2. Run linux/init_linux.sh if on linux
 3. Run first_time_setup.sh
 
-Eventually there will be an `init_osx.sh` i assume
+
+You can run `osx/osx-settings.sh` if on a mac. Doesn't do much right now.

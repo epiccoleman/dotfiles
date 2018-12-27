@@ -14,9 +14,6 @@ zle -N edit-command-line
 # this needs to happen before prompt system init
 export fpath=( "$HOME/.zfunctions" "$HOME/.zsh_completion" $fpath )
 
-autoload -Uz compinit && compinit
-# End of lines added by compinstall
-
 # turn on prompt system
 autoload -U promptinit && promptinit
 prompt pure
@@ -63,16 +60,19 @@ function tk {
     fi
 }
 
-[ -f ~/.fzf.zsh ] && \
-    source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && \
+    source $HOME/.fzf.zsh
 
 alias sbrc='source ~/.zshrc'
 
 [ -f ~/.config/exercism/exercism_completion.zsh ] && \
     source ~/.config/exercism/exercism_completion.zsh
 
-[ -f ~/.asdf/completions/asdf.bash ] && \
-    source ~/.asdf/completions/asdf.bash
+[ -f $HOME/.asdf/asdf.sh ] && \
+    source $HOME/.asdf/asdf.sh
+
+[ -f $HOME/.asdf/completions/asdf.bash ] && \
+    source $HOME/.asdf/completions/asdf.bash
 
 # source this blindly because i want it to error if it's not there
 source ~/.common-shell-profile
