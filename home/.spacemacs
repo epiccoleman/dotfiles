@@ -504,6 +504,7 @@ you should place your code here."
   ; org stuff
   (setq org-directory "~/notes")
   (setq org-default-notes-file (concat org-directory "/life.org"))
+  (setq org-journal-file (concat org-directory "/journal.org"))
   (setq org-agenda-files '("~/notes/life.org"))
 
   (setq org-startup-indented t)
@@ -534,6 +535,9 @@ you should place your code here."
           ("t" "To Do" entry
            (file org-default-notes-file)
            "* TODO %?")
+          ("j" "Journal" entry
+           (file+olp org-journal-file "Journal")
+           "* %T %?")
           ("d" "Dump" entry
            (file+olp org-default-notes-file "Refile" "Dumps")
            "* %T %?")
