@@ -5,15 +5,15 @@ unsetopt beep
 # The following lines were added by compinstall
 zstyle :compinstall filename "${HOME}/.zshrc"
 
-autoload -Uz compinit && compinit
-# End of lines added by compinstall
 
 autoload -z edit-command-line
 zle -N edit-command-line
 
 # this needs to happen before prompt system init
-export fpath=( "$HOME/.zfunctions" "$HOME/.zsh_completion" $fpath )
+export fpath=( "$HOME/.zfunctions" "$HOME/.zsh/completion" $fpath )
 
+# turn on completion system
+autoload -Uz compinit && compinit
 # turn on prompt system
 autoload -U promptinit && promptinit
 prompt pure
