@@ -503,9 +503,8 @@ you should place your code here."
 
   ; org stuff
   (setq org-directory "~/notes")
-  (setq org-default-notes-file (concat org-directory "/life.org"))
-  (setq org-journal-file (concat org-directory "/journal.org"))
-  (setq org-agenda-files '("~/notes/life.org"))
+  (setq org-default-notes-file (concat org-directory "/work.org"))
+  (setq org-agenda-files '("~/notes/work.org"))
 
   (setq org-startup-indented t)
   (setq org-special-ctrl-a/e t)
