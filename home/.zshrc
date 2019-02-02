@@ -5,7 +5,7 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -z edit-command-line
 zle -N edit-command-line
 
-# this needs to happen before prompt and completion system init
+# this needs to happen before prompt system init
 export fpath=( "$HOME/.zfunctions" "$HOME/.zsh/completion" $fpath )
 
 # turn on completion system
