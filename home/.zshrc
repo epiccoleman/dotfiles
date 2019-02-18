@@ -1,15 +1,11 @@
 setopt autocd extendedglob
 unsetopt beep
-# End of lines configured by zsh-newuser-install
-
-# The following lines were added by compinstall
 zstyle :compinstall filename "${HOME}/.zshrc"
-
 
 autoload -z edit-command-line
 zle -N edit-command-line
 
-# this needs to happen before prompt system init
+# this needs to happen before prompt and completion system init
 export fpath=( "$HOME/.zfunctions" "$HOME/.zsh/completion" $fpath )
 
 # turn on completion system
