@@ -27,6 +27,7 @@ alias tl='tmux list-sessions'
 alias gs='git status'
 alias gits="git"
 alias notes="cd ~/notes"
+alias e="emacsclient -n"
 
 function quick-clone {
     local clone_url=${1}
