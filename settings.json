@@ -1,0 +1,69 @@
+{
+    "vim.useSystemClipboard": true,
+    "vim.statusBarColorControl": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<esc>"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [ "<leader>", "w", "v"],
+            "after": [],
+            "commands": ["workbench.action.splitEditorRight"]
+        },
+        {
+            "before": [ "<leader>", "w", "s"],
+            "after": [],
+            "commands": ["workbench.action.splitEditorDown"]
+        },
+        {
+            "before": [ "<leader>", "w", "j"],
+            "after": [],
+            "commands": ["workbench.action.navigateDown"]
+        },
+        {
+            "before": [ "<leader>", "w", "k"],
+            "after": [],
+            "commands": ["workbench.action.navigateUp"]
+        },
+        {
+            "before": [ "<leader>", "w", "h"],
+            "after": [],
+            "commands": ["workbench.action.navigateLeft"]
+        },
+        {
+            "before": [ "<leader>", "w", "l"],
+            "after": [],
+            "commands": ["workbench.action.navigateRight"]
+        },
+        {
+            "before": [ "<leader>", "w", "d"],
+            "after": [],
+            "commands": ["workbench.action.joinTwoGroups"]
+        },
+        {
+            "before": [ "<leader>", "f", "s"],
+            "after": [],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": [ "<leader>", "f", "f"],
+            "after": [],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": [ "<leader>", "s", "f"],
+            "after": [],
+            "commands": ["workbench.action.findInFiles"]
+        },
+    ],
+    "workbench.colorTheme": "Solarized Dark"
+}
