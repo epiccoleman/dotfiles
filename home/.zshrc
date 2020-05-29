@@ -61,9 +61,6 @@ function tk {
 
 alias sbrc='source ~/.zshrc'
 
-[ -f ~/.config/exercism/exercism_completion.zsh ] && \
-    source ~/.config/exercism/exercism_completion.zsh
-
 [ -f $HOME/.asdf/asdf.sh ] && \
     source $HOME/.asdf/asdf.sh
 

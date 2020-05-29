@@ -12,7 +12,7 @@
 alias ll="ls -alh"
 alias l="ls"
 alias nuke="rm -rf"
-alias servdir="python -m SimpleHTTPServer 8080"
+alias servdir="python -m http.server 8080"
 alias servedir="servdir"
 alias untar="tar -xvzf"
 alias lip="localip"
@@ -53,15 +53,6 @@ function externalip {
     curl http://checkip.amazonaws.com/
 }
 
-function idea {
-    if [ -z $1 ]; then
-        vim ~/ideas.md
-    else
-        date >> ~/ideas.md
-        echo $1 >> ~/ideas.md
-    fi
-}
-
 function ta {
     local session="$1"
     if [[ -z "$session" ]]; then
@@ -90,14 +81,10 @@ function color-list {
 export EDITOR=/usr/bin/vim
 
 #enable colors for iterm2
-export CLICOLOR=1
-export TERM=xterm-256color
-
-
+#export CLICOLOR=1
+#export TERM=xterm-256color
 
 # source tool specific scripts
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
 
-# source a non-vc'ed profile for machine-specific stuff (this should be pretty short)
-# this should be at the end so that stuff can be overridden here
-[ -f ~/.system-specific-profile ] && source ~/.system-specific-profile
+[ -f ~/.common-shell-env ] && source ~/.common-shell-env
