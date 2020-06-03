@@ -50,8 +50,23 @@ function tk {
         # this is zsh read syntax - will have to adjust to use for bash
         read "response?Kill session: $session [Y/n]? "
         response=${response}
-        if [[ $response =~ ^(yes|y|Y| ) ]] | [ -z $response ]; then
+        if [[ $response =~ ^[Yy]$ ]] | [ -z $response ]; then
             tmux kill-session -t "$session"
+        fi
+    fi
+}
+
+function gitignore {
+    if [[ -f .gitignore ]]; then
+        echo "${1}" >> .gitignore
+    else
+        read "response?.gitignore does not exist, create it [Y/n]?"
+        echo
+        if [[ $response =~ ^[Yy]$ ]]
+        then
+            echo "${1}" >> .gitignore
+        else
+            echo "OK, not creating .gitignore"
         fi
     fi
 }

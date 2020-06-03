@@ -1,3 +1,3 @@
-export PATH=${PATH}:/usr/local/bin
+export PATH=/usr/local/bin:${PATH}
 [ -f ~/.asdf/asdf.sh ] && source ${HOME}/.asdf/asdf.sh
 [ -f ~/.system-specific-profile ] && source ~/.system-specific-profile
