@@ -28,6 +28,7 @@ alias gs='git status'
 alias gits="git"
 alias notes="cd ~/notes"
 alias e="emacsclient -n"
+alias timestamp="date +%s"
 
 function quick-clone {
     local clone_url=${1}
@@ -76,6 +77,13 @@ function color-list {
     for i in {1..255}; do
         printf "$(tput setab $i) $i $(tput sgr0)"
     done
+}
+
+function rand {
+    local begin_range="${1}"
+    local end_range="${2}"
+
+    echo $(($begin_range + RANDOM % $end_range))
 }
 
 export EDITOR=/usr/bin/vim
