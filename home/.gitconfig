@@ -23,4 +23,5 @@
     showUntrackedFiles = all
 [pull]
     rebase = true
-
+[net]
+    git-fetch-with-cli = true

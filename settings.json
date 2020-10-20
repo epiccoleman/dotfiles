@@ -1,69 +1,119 @@
 {
-    "vim.useSystemClipboard": true,
-    "vim.statusBarColorControl": true,
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#005f5f",
-        "statusBar.noFolderBackground": "#005f5f",
-        "statusBar.debuggingBackground": "#005f5f"
-    },
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "k"],
-            "after": ["<esc>"]
-        }
-    ],
-    "vim.leader": "<space>",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [ "<leader>", "w", "v"],
-            "after": [],
-            "commands": ["workbench.action.splitEditorRight"]
-        },
-        {
-            "before": [ "<leader>", "w", "s"],
-            "after": [],
-            "commands": ["workbench.action.splitEditorDown"]
-        },
-        {
-            "before": [ "<leader>", "w", "j"],
-            "after": [],
-            "commands": ["workbench.action.navigateDown"]
-        },
-        {
-            "before": [ "<leader>", "w", "k"],
-            "after": [],
-            "commands": ["workbench.action.navigateUp"]
-        },
-        {
-            "before": [ "<leader>", "w", "h"],
-            "after": [],
-            "commands": ["workbench.action.navigateLeft"]
-        },
-        {
-            "before": [ "<leader>", "w", "l"],
-            "after": [],
-            "commands": ["workbench.action.navigateRight"]
-        },
-        {
-            "before": [ "<leader>", "w", "d"],
-            "after": [],
-            "commands": ["workbench.action.joinTwoGroups"]
-        },
-        {
-            "before": [ "<leader>", "f", "s"],
-            "after": [],
-            "commands": ["workbench.action.files.save"]
-        },
-        {
-            "before": [ "<leader>", "f", "f"],
-            "after": [],
-            "commands": ["workbench.action.quickOpen"]
-        },
-        {
-            "before": [ "<leader>", "s", "f"],
-            "after": [],
-            "commands": ["workbench.action.findInFiles"]
-        },
-    ],
-    "workbench.colorTheme": "Solarized Dark"
+  "vim.useSystemClipboard": true,
+//   "vim.statusBarColorControl": true,
+//   "editor.quickSuggestions": false,
+  "vim.statusBarColorControl": false,
+//   "workbench.colorCustomizations": { "statusBar.background": "#005f5f",
+//      "statusBar.noFolderBackground": "#005f5f",
+//     "statusBar.debuggingBackground": "#005f5f"
+// },
+  "vim.insertModeKeyBindings": [
+      {
+          "before": ["j", "k"],
+          "after": ["<esc>"]
+      }
+  ],
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+      {
+          "before": [ "<leader>", "w", "v"],
+          "after": [],
+          "commands": ["workbench.action.splitEditorRight"]
+      },
+      {
+          "before": [ "<leader>", "w", "s"],
+          "after": [],
+          "commands": ["workbench.action.splitEditorDown"]
+      },
+      {
+          "before": [ "<leader>", "w", "j"],
+          "after": [],
+          "commands": ["workbench.action.navigateDown"]
+      },
+      {
+          "before": [ "<leader>", "w", "k"],
+          "after": [],
+          "commands": ["workbench.action.navigateUp"]
+      },
+      {
+          "before": [ "<leader>", "w", "h"],
+          "after": [],
+          "commands": ["workbench.action.navigateLeft"]
+      },
+      {
+          "before": [ "<leader>", "w", "l"],
+          "after": [],
+          "commands": ["workbench.action.navigateRight"]
+      },
+      {
+          "before": [ "<leader>", "w", "d"],
+          "after": [],
+          "commands": ["workbench.action.joinTwoGroups"]
+      },
+      {
+          "before": [ "<leader>", "w", "x"],
+          "after": [],
+          "commands": ["workbench.action.closeActiveEditor"]
+      },
+      {
+          "before": [ "<leader>", "f", "s"],
+          "after": [],
+          "commands": ["workbench.action.files.save"]
+      },
+      {
+          "before": [ "<leader>", "f", "f"],
+          "after": [],
+          "commands": ["workbench.action.quickOpen"]
+      },
+      {
+          "before": [ "<leader>", "s", "f"],
+          "after": [],
+          "commands": ["workbench.action.findInFiles"]
+      },
+      {
+          "before": [ "<leader>", "=", "="],
+          "after": [],
+          "commands": ["editor.action.format"]
+      },
+      {
+        "before": [ "<leader>", "g", "s"],
+        "after": [],
+        "commands": ["workbench.view.scm"]
+      },
+      {
+        "before": [ "<leader>", "p", "t"],
+        "after": [],
+        "commands": ["workbench.view.explorer"]
+      },
+      {
+          "before": [ "<leader>", "p", "s"],
+          "after": [],
+          "commands": ["workbench.action.toggleSidebarVisibility"]
+      },
+      {
+          "before": [ "<leader>", "t", "a"],
+          "after": [],
+          "commands": ["test-explorer.run-all"]
+      },
+      {
+          "before": [ "<leader>", "t", "b"],
+          "after": [],
+          "commands": ["test-explorer.run-file"]
+      },
+      {
+          "before": [ "<leader>", "t", "t"],
+          "after": [],
+          "commands": ["test-explorer.run-test-at-cursor"]
+      },
+  ],
+  "workbench.colorTheme": "Solarized Light",
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "rubyTestExplorer.rspecCommand": "~/.asdf/shims/bundle exec rspec",
+  "rubyTestExplorer.testFramework": "auto",
+  "rubyTestExplorer.rspecDirectory": "./spec/",
+  "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 1,
+    "sync.gist": "b955ea2a568883efa006328e5a9bfa9d"
 }
