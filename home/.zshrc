@@ -5,8 +5,12 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -z edit-command-line
 zle -N edit-command-line
 
+# glares at zsh
+[ -f $HOME/.asdf/asdf.sh ] && \
+    source $HOME/.asdf/asdf.sh
+#
 # this needs to happen before prompt system init
-export fpath=( "$HOME/.zfunctions" "$HOME/.zsh/completion" $fpath )
+export fpath=("$HOME/.asdf/completions" "$HOME/.zfunctions" "$HOME/.zsh/completion" $fpath )
 
 # turn on completion system
 autoload -Uz compinit && compinit
@@ -71,16 +75,15 @@ function gitignore {
     fi
 }
 
+alias sbrc='source ~/.zshrc'
+
 [ -f $HOME/.fzf.zsh ] && \
     source $HOME/.fzf.zsh
 
-alias sbrc='source ~/.zshrc'
-
-[ -f $HOME/.asdf/asdf.sh ] && \
-    source $HOME/.asdf/asdf.sh
-
-[ -f $HOME/.asdf/completions/asdf.bash ] && \
-    source $HOME/.asdf/completions/asdf.bash
 
 # source this blindly because i want it to error if it's not there
 source ~/.common-shell-profile
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/eric/.sdkman"
+[[ -s "/Users/eric/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/eric/.sdkman/bin/sdkman-init.sh"

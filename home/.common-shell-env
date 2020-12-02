@@ -1,3 +1,5 @@
-export PATH=/usr/local/bin:${PATH}
-[ -f ~/.asdf/asdf.sh ] && source ${HOME}/.asdf/asdf.sh
-[ -f ~/.system-specific-profile ] && source ~/.system-specific-profile
+export PATH="/usr/local/bin/:${PATH}"
+export PATH="${PATH}:~/Library/Application Support/Coursier/bin"
+export PATH="${PATH}:/Users/eric/.emacs.d/bin"
+
+[ -f ~/.system-specific-profile ] && source ~/.system-specific-profile || true
