@@ -2,3 +2,4 @@ inoremap jk <esc>
 
 set commentary
 set surround
+set clipboard+=unnamed
