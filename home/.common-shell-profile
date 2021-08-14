@@ -20,7 +20,6 @@ alias eip="externalip"
 alias clr="clear"
 alias dotfiles="cd ~/.homesick/repos/dotfiles"
 alias clone="quick-clone"
-alias cask="brew cask"
 alias homesick="homeshick"
 alias t='tmux'
 alias tl='tmux list-sessions'
@@ -84,6 +83,17 @@ function rand {
     local end_range="${2}"
 
     echo $(($begin_range + RANDOM % $end_range))
+}
+
+function brew {
+    # seriously fuck you homebrew
+    local homebrew_executable="/usr/local/bin/brew"
+
+    if [[ ${1} == 'cask' ]]; then
+        $homebrew_executable install --cask "${@:3}"
+    else
+        $homebrew_executable "${@:1}"
+    fi
 }
 
 export EDITOR=/usr/bin/vim
