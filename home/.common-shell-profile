@@ -89,7 +89,7 @@ function brew {
     # seriously fuck you homebrew
     local homebrew_executable="/usr/local/bin/brew"
 
-    if [[ ${1} == 'cask' ]]; then
+    if [[ ${1} == 'cask' ]] && [[ ${2} == 'install' ]]; then
         $homebrew_executable install --cask "${@:3}"
     else
         $homebrew_executable "${@:1}"
