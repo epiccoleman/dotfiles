@@ -3,3 +3,10 @@ inoremap jk <esc>
 set commentary
 set surround
 set clipboard+=unnamed
+
+let mapleader = " "
+
+nnoremap <Leader>wh :action VimWindowLeft
+nnoremap <Leader>wj :action VimWindowDown
+nnoremap <Leader>wk :action VimWindowUp
+nnoremap <Leader>wl :action VimWindowRight

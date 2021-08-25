@@ -10,7 +10,7 @@ zle -N edit-command-line
     source $HOME/.asdf/asdf.sh
 #
 # this needs to happen before prompt system init
-export fpath=("$HOME/.asdf/completions" "$HOME/.zfunctions" "$HOME/.zsh/completion" $fpath )
+export fpath=("$HOME/.asdf/completions" "$HOME/.zsh/completion" "$HOME/.zsh/pure" $fpath )
 
 # turn on completion system
 autoload -Uz compinit && compinit
@@ -18,7 +18,8 @@ autoload -Uz compinit && compinit
 autoload -U promptinit && promptinit
 prompt pure
 # prompt char is green normally and red after a failed command
-PROMPT=%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯ }%f
+# you can deal with the pink prompt char until you figure out the right way to do this
+# PROMPT=%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯ }%f
 
 # history settings
 HISTSIZE=5000               #How many lines of history to keep in memory

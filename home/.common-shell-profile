@@ -96,6 +96,10 @@ function brew {
     fi
 }
 
+function cheat {
+    curl "cheat.sh/$1"
+}
+
 export EDITOR=/usr/bin/vim
 
 #enable colors for iterm2
