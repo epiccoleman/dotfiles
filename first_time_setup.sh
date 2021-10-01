@@ -10,8 +10,9 @@ source ${HOME}/.homesick/repos/homeshick/homeshick.sh
 homeshick clone epiccoleman/dotfiles
 homeshick symlink dotfiles --force
 
-${script_dir}/install_pure_prompt.sh
+# ${script_dir}/install_pure_prompt.sh
 ${script_dir}/install_vim_plug.sh
+
 
 # Interactive steps below this line
 ${script_dir}/vim_plugins.sh install

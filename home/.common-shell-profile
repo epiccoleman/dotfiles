@@ -53,6 +53,15 @@ function externalip {
     curl http://checkip.amazonaws.com/
 }
 
+function whodis {
+    # finds the process listening on the given port
+    lsof -i tcp:$1
+}
+
+function idea {
+    open -na "IntelliJ IDEA.app" --args "$@"
+}
+
 function ta {
     local session="$1"
     if [[ -z "$session" ]]; then
