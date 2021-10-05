@@ -16,10 +16,10 @@ export fpath=("$HOME/.asdf/completions" "$HOME/.zsh/completion" "$HOME/.zsh/pure
 autoload -Uz compinit && compinit
 # turn on prompt system
 autoload -U promptinit && promptinit
+
 prompt pure
 # prompt char is green normally and red after a failed command
-# you can deal with the pink prompt char until you figure out the right way to do this
-# PROMPT=%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯ }%f
+zstyle ':prompt:pure:prompt:success' color green
 
 # history settings
 HISTSIZE=5000               #How many lines of history to keep in memory
