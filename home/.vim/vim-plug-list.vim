@@ -6,6 +6,7 @@ Plug 'epiccoleman/vim-colors-solarized',{ 'do': './install.sh' }
 " universal functionality
 Plug 'tpope/vim-commentary'
 " Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'christoomey/vim-tmux-navigator'
 
 " lang-specific

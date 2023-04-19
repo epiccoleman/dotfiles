@@ -9,6 +9,7 @@
 ################################################################################
 
 # aliases and functions
+alias ls='ls -F'
 alias ll="ls -alh"
 alias l="ls"
 alias nuke="rm -rf"
@@ -107,6 +108,10 @@ function brew {
 
 function cheat {
     curl "cheat.sh/$1"
+}
+
+function pubdate {
+    date -j -f "%Y-%m-%d" "${1}" "+%a, %d %b %Y %H:%M:%S %Z"
 }
 
 export EDITOR=/usr/bin/vim

@@ -21,6 +21,13 @@ prompt pure
 # prompt char is green normally and red after a failed command
 zstyle ':prompt:pure:prompt:success' color green
 
+# set $REPO_ROOT to the top level of any given repo we in
+# currently barfs when not in a repo, but that's ok, it'll remind me to fix it
+precmd() {
+    local repo_root=${$(git rev-parse --showtoplevel 2>&1 /dev/null):-$PWD}
+    export REPO_ROOT=$repo_root
+}
+
 # history settings
 HISTSIZE=5000               #How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     #Where to save history to disk
@@ -74,6 +81,10 @@ function gitignore {
             echo "OK, not creating .gitignore"
         fi
     fi
+}
+
+command_not_found_handler() {
+    figlet "lol, $@"
 }
 
 alias sbrc='source ~/.zshrc'

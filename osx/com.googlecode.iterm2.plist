@@ -187,11 +187,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>0 163 224 275 0 0 2560 1417 </string>
+	<string>0 165 224 275 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 472 825 583 0 0 1920 1055 </string>
+	<string>0 832 825 583 0 0 2560 1415 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2406 1010 1125 1023 1680 618 2560 1415 </string>
+	<string>636 689 825 583 0 0 2560 1415 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>380 148 825 583 0 0 2560 1415 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -842,7 +844,7 @@
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
-			<false/>
+			<true/>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -2186,16 +2188,18 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1920, 1080}}</string>
+		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{162, 988}</string>
+		<string>{268, 784}</string>
 	</dict>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>C729CF99-66FC-4C4D-82C4-7105D225DC23</string>
 	<key>NoSyncLastTipTime</key>
-	<real>655053271.252527</real>
+	<real>655139754.97785401</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>22</integer>
+	<integer>60</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2961,6 +2965,7 @@
 		<string>0041</string>
 		<string>0034</string>
 		<string>0027</string>
+		<string>0077</string>
 		<string>0013</string>
 		<string>0049</string>
 		<string>0006</string>
@@ -2993,7 +2998,7 @@
 		<string>000</string>
 		<string>0044</string>
 		<string>0051</string>
-		<string>0077</string>
+		<string>0078</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
