@@ -83,7 +83,8 @@ set wildmode=longest,list,full
 set wildmenu
 
 " yank to system clipboard automatically
-set clipboard=unnamed
+" oh wait that actually sucks
+" set clipboard=unnamed
 
 " statusline always shows
 set laststatus=2

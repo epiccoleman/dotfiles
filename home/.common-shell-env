@@ -1,6 +1,4 @@
 export PATH="/usr/local/bin/:${PATH}"
-export PATH="${PATH}:~/Library/Application Support/Coursier/bin"
-export PATH="${PATH}:/Users/eric/.emacs.d/bin"
 export PATH="${PATH}:/Users/eric/bin"
 
 [ -f ~/.system-specific-profile ] && source ~/.system-specific-profile || true
