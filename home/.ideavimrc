@@ -10,3 +10,8 @@ nnoremap <Leader>wh :action VimWindowLeft
 nnoremap <Leader>wj :action VimWindowDown
 nnoremap <Leader>wk :action VimWindowUp
 nnoremap <Leader>wl :action VimWindowRight
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+

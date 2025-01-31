@@ -21,6 +21,10 @@
     root = rev-parse --show-toplevel
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     kermit = commit
+    recent-branches = "!git reflog | grep 'checkout: ' | awk '{print $NF}' | awk '!seen[$0]++' | head -n 5"
+    rb = recent-branches
+    checkout-recent-branch = "!sh ~/path/to/git-crb.sh"
+    crb = checkout-recent-branch
 [status]
     showUntrackedFiles = all
 [pull]
