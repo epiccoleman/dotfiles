@@ -5,18 +5,14 @@
 # symlinks
 CASTLE_PATH="$(dirname $0)/.."
 
-# cd $CASTLE_PATH
+cd $CASTLE_PATH
 
-# git submodule init
-# git submodule update
+git submodule init
+git submodule update
 
-# pushd pure-zsh-prompt
-# git pull origin master
-# git checkout master
-# popd
+pushd pure-zsh-prompt
+git pull origin main
+git checkout main
+popd
 
-# mkdir -p $HOME/.zfunctions
-# ln -sf $PWD/pure-zsh-prompt/async.zsh $HOME/.zfunctions/async
-# ln -sf $PWD/pure-zsh-prompt/pure.zsh $HOME/.zfunctions/prompt_pure_setup
-
-echo "This no longer works. Go follow the instructions in the pure readme. Or write a better script. Hello from your past self!"
+ln -sf $PWD/pure-zsh-prompt $HOME/.zsh/pure
