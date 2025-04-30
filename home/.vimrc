@@ -96,4 +96,6 @@ set modelines=5 " search for modeline with first and last 5 lines
 set splitbelow "open new horizontal splits below current one
 set splitright "open new vertical splits to right of current one
 
+set mouse=a "make the mouse work, how did i not already have this
+
 source ~/.vim/vim-plug-list.vim
