@@ -247,7 +247,7 @@
     },
     "liveshare.audio.joinCallBehavior": "accept",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": "single",
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "explorer.confirmDelete": false,
     "[typescript]": {
@@ -285,5 +285,6 @@
     ],
     "cSpell.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "window.newWindowProfile": "code"
 }

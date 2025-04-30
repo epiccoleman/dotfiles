@@ -5,12 +5,12 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -z edit-command-line
 zle -N edit-command-line
 
-# glares at zsh
-[ -f $HOME/.asdf/asdf.sh ] && \
-    source $HOME/.asdf/asdf.sh
+# # glares at zsh
+# [ -f $HOME/.asdf/asdf.sh ] && \
+#     source $HOME/.asdf/asdf.sh
 #
 # this needs to happen before prompt system init
-export fpath=("$HOME/.asdf/completions" "$HOME/.zsh/completion" "$HOME/.zsh/pure" $fpath )
+export fpath=("$HOME/.zsh/completion" "$HOME/.zsh/pure" /opt/homebrew/share/zsh/site-functions $fpath )
 
 # turn on completion system
 autoload -Uz compinit && compinit
@@ -27,6 +27,8 @@ precmd() {
     local repo_root=${$(git rev-parse --showtoplevel 2>&1 /dev/null):-$PWD}
     export REPO_ROOT=$repo_root
 }
+
+setopt interactivecomments # stop zsh from bitching when i comment out a shell line for later
 
 # history settings
 HISTSIZE=5000               #How many lines of history to keep in memory
@@ -99,3 +101,5 @@ source ~/.common-shell-profile
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/eric/.sdkman"
 [[ -f "/Users/eric/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/eric/.sdkman/bin/sdkman-init.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
