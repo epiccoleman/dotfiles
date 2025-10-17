@@ -1,0 +1,81 @@
+{
+    "apps": [
+        {
+            "Info": "",
+            "Name": "7zip",
+            "Source": "main",
+            "Version": "25.01",
+            "Updated": "2025-08-31T19:19:57.7777429-04:00"
+        },
+        {
+            "Info": "",
+            "Name": "dark",
+            "Source": "main",
+            "Version": "3.14.1",
+            "Updated": "2025-08-31T19:32:16.3525639-04:00"
+        },
+        {
+            "Info": "",
+            "Name": "figlet",
+            "Source": "main",
+            "Version": "1.0-go",
+            "Updated": "2025-08-31T23:07:49.8350789-04:00"
+        },
+        {
+            "Info": "",
+            "Name": "fzf",
+            "Source": "main",
+            "Version": "0.65.2",
+            "Updated": "2025-08-31T19:25:04.0731061-04:00"
+        },
+        {
+            "Info": "",
+            "Name": "git",
+            "Source": "main",
+            "Version": "2.51.0",
+            "Updated": "2025-08-31T19:20:10.155893-04:00"
+        },
+        {
+            "Info": "",
+            "Name": "gsudo",
+            "Source": "main",
+            "Version": "2.6.0",
+            "Updated": "2025-08-31T22:38:01.3935373-04:00"
+        },
+        {
+            "Info": "",
+            "Name": "python",
+            "Source": "main",
+            "Version": "3.13.7",
+            "Updated": "2025-08-31T19:32:41.9276624-04:00"
+        },
+        {
+            "Info": "",
+            "Name": "vim",
+            "Source": "main",
+            "Version": "9.1.0",
+            "Updated": "2025-08-31T19:26:55.5262681-04:00"
+        },
+        {
+            "Info": "",
+            "Name": "vscode",
+            "Source": "extras",
+            "Version": "1.103.2",
+            "Updated": "2025-08-31T19:35:30.0563571-04:00"
+        }
+    ],
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": "2025-08-31T20:46:24-04:00",
+            "Manifests": 1403
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2025-08-31T20:46:39-04:00",
+            "Manifests": 2180
+        }
+    ]
+}

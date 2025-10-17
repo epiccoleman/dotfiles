@@ -1,0 +1,35 @@
+[user]
+    email = eric@epiccoleman.com
+    name = Eric Coleman
+[core]
+    autocrlf = true
+    editor = vim.exe
+    excludesfile = ~/.gitignore-global
+[push]
+    default = simple
+[alias]
+    stat  = status
+    tatus = status
+    st    = status
+    nuke  = reset --hard HEAD
+    alias = config --get-regexp ^alias\\.
+    sl = "!f() { git log --oneline -n ${1-5}; }; f"
+    cm    = commit -m
+    aa    = add --all
+    dc    = diff --cached
+    discard-untracked = clean -fx
+    ce = commit --amend --no-edit
+    root = rev-parse --show-toplevel
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    kermit = commit
+    recent-branches = "!git reflog | grep 'checkout: ' | awk '{print $NF}' | awk '!seen[$0]++' | head -n 5"
+    rb = recent-branches
+    checkout-recent-branch = "!sh ~/path/to/git-crb.sh"
+    crb = checkout-recent-branch
+[status]
+    showUntrackedFiles = all
+[pull]
+    rebase = true
+[net]
+    git-fetch-with-cli = true
+
