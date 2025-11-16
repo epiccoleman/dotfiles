@@ -68,7 +68,7 @@ function ta {
     fi
 }
 
-function ts {
+function tn {
     local session="$1"
     if [[ -z "$session" ]]; then
         tmux
@@ -91,16 +91,16 @@ function rand {
     echo $(($begin_range + RANDOM % $end_range))
 }
 
-function brew {
-    # seriously fuck you homebrew
-    local homebrew_executable="/usr/local/bin/brew"
-
-    if [[ ${1} == 'cask' ]] && [[ ${2} == 'install' ]]; then
-        $homebrew_executable install --cask "${@:3}"
-    else
-        $homebrew_executable "${@:1}"
-    fi
-}
+#function brew {
+#    # seriously fuck you homebrew
+#    local homebrew_executable="/usr/local/bin/brew"
+#
+#    if [[ ${1} == 'cask' ]] && [[ ${2} == 'install' ]]; then
+#        $homebrew_executable install --cask "${@:3}"
+#    else
+#        $homebrew_executable "${@:1}"
+#    fi
+#}
 
 function cheat {
     curl "cheat.sh/$1"
