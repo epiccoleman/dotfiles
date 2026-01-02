@@ -286,5 +286,6 @@
     "cSpell.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
     "editor.minimap.enabled": false,
-    "window.newWindowProfile": "code"
+    "window.newWindowProfile": "code",
+    "update.showReleaseNotes": false
 }

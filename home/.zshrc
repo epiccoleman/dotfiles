@@ -5,12 +5,8 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 autoload -z edit-command-line
 zle -N edit-command-line
 
-# # glares at zsh
-# [ -f $HOME/.asdf/asdf.sh ] && \
-#     source $HOME/.asdf/asdf.sh
-#
 # this needs to happen before prompt system init
-export fpath=("$HOME/.zsh/completion" "$HOME/.zsh/pure" /opt/homebrew/share/zsh/site-functions $fpath )
+export fpath=("$HOME/.zsh/completion" "$HOME/.zsh/pure" /opt/homebrew/share/zsh/site-functions "$HOME/.asdf/completions" $fpath )
 
 # turn on completion system
 autoload -Uz compinit && compinit
@@ -87,6 +83,7 @@ function gitignore {
 
 command_not_found_handler() {
     figlet "lol, $@"
+    exit 127
 }
 
 alias sbrc='source ~/.zshrc'

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 dotfiles_repo_dir=${HOME}/.homesick/repos/dotfiles
 script_dir=${dotfiles_repo_dir}/scripts
@@ -12,6 +12,11 @@ homeshick symlink dotfiles --force
 
 ${script_dir}/install_pure_prompt.sh
 ${script_dir}/install_vim_plug.sh
+
+# if [[ $(uname -a) =~ "Darwin" ]]; then
+#     ln -sf ${HOME}/.homesick/repos/dotfiles/osx/com.googlecode.iterm2.plist ${HOME}/Library/Preferences/com.googlecode.iterm2.plist
+
+# fi
 
 
 # Interactive steps below this line

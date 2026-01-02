@@ -25,6 +25,7 @@
     rb = recent-branches
     checkout-recent-branch = "!sh ~/path/to/git-crb.sh"
     crb = checkout-recent-branch
+    rm-untracked = !git status --porcelain | grep "^??" | cut -c4- | xargs rm -f
 [status]
     showUntrackedFiles = all
 [pull]
