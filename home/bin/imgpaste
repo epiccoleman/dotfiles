@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# thanks to simonw for this script: https://til.simonwillison.net/macos/impaste
+
 platform=$(uname)
 
 if [[ ! $platform == "Darwin" ]]; then
