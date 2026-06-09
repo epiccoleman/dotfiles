@@ -4,8 +4,10 @@
 [core]
     editor = /usr/bin/vim
     excludesfile = ~/.gitignore-global
+    autocrlf = input
 [push]
     default = simple
+    autoSetupRemote = true
 [alias]
     stat  = status
     tatus = status
@@ -23,7 +25,7 @@
     kermit = commit
     recent-branches = "!git reflog | grep 'checkout: ' | awk '{print $NF}' | awk '!seen[$0]++' | head -n 5"
     rb = recent-branches
-    checkout-recent-branch = "!sh ~/path/to/git-crb.sh"
+    checkout-recent-branch = "!git reflog | grep 'checkout: ' | awk '{print $NF}' | awk '!seen[$0]++' | head -n 20 | fzf --height=10 --reverse --header='checkout recent branch' | xargs git checkout"
     crb = checkout-recent-branch
     rm-untracked = !git status --porcelain | grep "^??" | cut -c4- | xargs rm -f
 [status]
