@@ -1,6 +1,19 @@
+" New stuff
+"
+"
+"
+lua << EOF
+  vim.lsp.config('expert', {
+    cmd = { 'expert', '--stdio' },
+    root_markers = { 'mix.exs', '.git' },
+    filetypes = { 'elixir', 'eelixir', 'heex' },
+  })
+  vim.lsp.enable('expert')
+EOF
+
+
+"
 " Stuff we're definitely keeping:
-"
-"
 " enable line numbers
 set number
 "
@@ -44,5 +57,7 @@ set mouse=a "make the mouse work, how did i not already have this
 
 set splitbelow "open new horizontal splits below current one
 set splitright "open new vertical splits to right of current one
+set notermguicolors " just use the terminal color scheme. this will probably cause some annoyance someday
 
 lua require('config.lazy')
+
