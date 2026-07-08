@@ -17,23 +17,16 @@ prompt pure
 # prompt char is green normally and red after a failed command
 zstyle ':prompt:pure:prompt:success' color green
 
-# set $REPO_ROOT to the top level of any given repo we in
-# currently barfs when not in a repo, but that's ok, it'll remind me to fix it
-precmd() {
-    local repo_root=${$(git rev-parse --showtoplevel 2>&1 /dev/null):-$PWD}
-    export REPO_ROOT=$repo_root
-}
-
 setopt interactivecomments # stop zsh from bitching when i comment out a shell line for later
 
 # history settings
 HISTSIZE=5000               #How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     #Where to save history to disk
 SAVEHIST=5000               #Number of history entries to save to disk
-#HISTDUP=erase               #Erase duplicates in the history file
 setopt    appendhistory     #Append history to the history file (no overwriting)
 setopt    sharehistory      #Share history across terminals
 setopt incappendhistory #Immediately append to the history file, not just when a term is killed
+
 
 
 # use vi style line editor
@@ -60,7 +53,7 @@ function tk {
         # this is zsh read syntax - will have to adjust to use for bash
         read "response?Kill session: $session [Y/n]? "
         response=${response}
-        if [[ $response =~ ^[Yy]$ ]] | [ -z $response ]; then
+        if [[ $response =~ ^[Yy]$ ]] || [ -z $response ]; then
             tmux kill-session -t "$session"
         fi
     fi
@@ -82,7 +75,11 @@ function gitignore {
 }
 
 command_not_found_handler() {
-    figlet "lol, $@"
+    if command -v figlet >/dev/null 2>&1; then
+        figlet "lol, $@"
+    else
+        echo "lol, $@"
+    fi
     exit 127
 }
 
@@ -91,12 +88,7 @@ alias sbrc='source ~/.zshrc'
 [ -f $HOME/.fzf.zsh ] && \
     source $HOME/.fzf.zsh
 
-
 # source this blindly because i want it to error if it's not there
 source ~/.common-shell-profile
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/eric/.sdkman"
-[[ -f "/Users/eric/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/eric/.sdkman/bin/sdkman-init.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

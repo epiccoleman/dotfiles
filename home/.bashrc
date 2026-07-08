@@ -3,7 +3,7 @@ function tk {
     if [[ ! -z "$session" ]]; then
         read -r -p "Kill session: ${session}? [Y/n]" response
         response=${response,,}    # tolower
-        if [[ $response =~ ^(yes|y|Y| ) ]] | [[ -z $response ]]; then
+        if [[ $response =~ ^(yes|y|Y| ) ]] || [[ -z $response ]]; then
             tmux kill-session -t "$session"
         fi
     fi

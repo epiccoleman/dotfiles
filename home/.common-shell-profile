@@ -47,7 +47,7 @@ function xa {
 }
 
 function localip {
-    ifconfig | grep 192 | cut -d ' ' -f 12 | cut -d ':' -f 2
+    ifconfig | grep 192 | cut -d ' ' -f 2
 }
 
 function externalip {
@@ -122,5 +122,3 @@ export EDITOR=/usr/bin/vim
 
 # source tool specific scripts
 [ -f ~/.homesick/repos/homeshick/homeshick.sh ] && source ~/.homesick/repos/homeshick/homeshick.sh
-
-[ -f ~/.common-shell-env ] && source ~/.common-shell-env
